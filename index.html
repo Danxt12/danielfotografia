@@ -61,7 +61,7 @@
         }
 
         /* ==========================================================================
-           2. NAVEGAÇÃO / HEADER
+           2. NAVEGAÇÃO / HEADER (LOGO MAIOR)
            ========================================================================== */
         header {
             position: fixed;
@@ -83,18 +83,19 @@
             align-items: center;
         }
 
+        /* LOGO AUMENTADO PARA 150PX */
         .logo-brand {
-            height: 110px;
+            height: 150px;
             width: auto;
             object-fit: contain;
-            filter: drop-shadow(0px 0px 10px rgba(0, 210, 255, 0.5));
+            filter: drop-shadow(0px 0px 12px rgba(0, 210, 255, 0.6));
             transition: var(--transition);
-            margin: -20px 0;
+            margin: -30px 0;
         }
 
         .logo-brand:hover {
             transform: scale(1.05);
-            filter: drop-shadow(0px 0px 15px rgba(0, 210, 255, 0.8));
+            filter: drop-shadow(0px 0px 18px rgba(0, 210, 255, 0.9));
         }
 
         .nav-links {
@@ -360,7 +361,7 @@
         }
 
         /* ==========================================================================
-           6. PORTFÓLIO - ÁLBUNS DESLIZANTES (FORMATO VERTICAL 3/4)
+           6. PORTFÓLIO & DESIGN - ESTRUTURA DE CARROSSEL / SLIDER
            ========================================================================== */
         .filter-container {
             display: flex;
@@ -400,7 +401,8 @@
             padding: 0 15px;
         }
 
-        .gallery-slider {
+        .gallery-slider,
+        .design-slider {
             display: flex;
             gap: 25px;
             overflow-x: auto;
@@ -411,7 +413,8 @@
             -ms-overflow-style: none;
         }
 
-        .gallery-slider::-webkit-scrollbar {
+        .gallery-slider::-webkit-scrollbar,
+        .design-slider::-webkit-scrollbar {
             display: none;
         }
 
@@ -494,7 +497,7 @@
             color: #000;
         }
 
-        /* SETAS LATERAIS DO CARROSSEL */
+        /* SETAS LATERAIS DOS CARROSSEIS */
         .slide-btn {
             position: absolute;
             top: 50%;
@@ -525,17 +528,12 @@
         .slide-btn.next { right: -15px; }
 
         /* ==========================================================================
-           7. SECÇÃO EXCLUSIVA - DESIGN GRÁFICO (APENAS VISUALIZAR)
+           7. SECÇÃO EXCLUSIVA - DESIGN GRÁFICO (CARROSSEL DESLIZANTE)
            ========================================================================== */
-        .design-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-            gap: 25px;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
         .design-card {
+            flex: 0 0 calc(25% - 19px);
+            min-width: 250px;
+            scroll-snap-align: start;
             position: relative;
             border-radius: var(--radius);
             overflow: hidden;
@@ -854,7 +852,8 @@
             .about-grid, .contact-container {
                 grid-template-columns: 1fr;
             }
-            .gallery-item {
+            .gallery-item,
+            .design-card {
                 flex: 0 0 calc(33.333% - 17px);
                 min-width: 220px;
             }
@@ -882,10 +881,12 @@
             }
 
             .logo-brand {
-                height: 85px;
+                height: 110px;
+                margin: -20px 0;
             }
 
-            .gallery-item {
+            .gallery-item,
+            .design-card {
                 flex: 0 0 75%;
                 min-width: 220px;
             }
@@ -1001,7 +1002,7 @@
 
             <div class="gallery-slider" id="gallerySlider">
                 
-                <!-- ÁLBUM BANLEK 1 (Marcado também como 'recentes' para aparecer ao clicar no filtro) -->
+                <!-- ÁLBUM BANLEK 1 -->
                 <a href="https://banlek.com/album/2734b9" target="_blank" class="gallery-item" data-category="beachtennis recentes">
                     <img src="https://d2hk32cswy6zx7.cloudfront.net/a176b2905ad0eb52c0b80cc1cc697eb6/v2_727c3dd3-5d28-4c40-984e-d91038f8f4e8.jpg" alt="Capa Álbum Motocross Banlek">
                     <div class="gallery-overlay">
@@ -1031,7 +1032,7 @@
                     </div>
                 </a>
 
-                <!-- ÁLBUM BANLEK 1 (Marcado também como 'recentes' para aparecer ao clicar no filtro) -->
+                <!-- ÁLBUM BANLEK 1 -->
                 <a href="https://banlek.com/album/25fa6b" target="_blank" class="gallery-item" data-category="beachtennis volei futevolei recentes">
                     <img src="https://d2hk32cswy6zx7.cloudfront.net/b2fd1cb74ffe4d79a33ffcb9053ad421/v2_92864580-d1bb-4d5c-b40a-13b8d0a5eb71.jpg" alt="Capa Álbum Motocross Banlek">
                     <div class="gallery-overlay">
@@ -1041,7 +1042,7 @@
                     </div>
                 </a>
 
-                <!-- ÁLBUM BANLEK 1 (Marcado também como 'recentes' para aparecer ao clicar no filtro) -->
+                <!-- ÁLBUM BANLEK 1 -->
                 <a href="https://banlek.com/album/25f631" target="_blank" class="gallery-item" data-category="volei recentes">
                     <img src="https://d2hk32cswy6zx7.cloudfront.net/94978164b7e12acfe68b44cfe77b5419/v2_e2683e0b-21f5-4126-8296-51d61fca93f3.jpg" alt="Capa Álbum Motocross Banlek">
                     <div class="gallery-overlay">
@@ -1051,7 +1052,7 @@
                     </div>
                 </a>
 
-                <!-- ÁLBUM BANLEK 1 (Marcado também como 'recentes' para aparecer ao clicar no filtro) -->
+                <!-- ÁLBUM BANLEK 1 -->
                 <a href="https://banlek.com/album/25f2ef" target="_blank" class="gallery-item" data-category="beachtennis recentes">
                     <img src="https://d2hk32cswy6zx7.cloudfront.net/8a78698febc180cd81e65c414c628a3f/v2_a2e0bb10-2b7d-4427-9abc-e86d576628ed.jpg" alt="Capa Álbum Motocross Banlek">
                     <div class="gallery-overlay">
@@ -1171,7 +1172,7 @@
                     </div>
                 </a>                
 
-                <!-- ÁLBUM BANLEK 2 (Marcado também como 'recentes' para aparecer ao clicar no filtro) -->
+                <!-- ÁLBUM BANLEK 2 -->
                 <a href="https://banlek.com/album/1e5f67" target="_blank" class="gallery-item" data-category="motocross recentes">
                     <img src="https://d2hk32cswy6zx7.cloudfront.net/94d582808a895ffac693ec9a8aefaf5f/v2_7d28d7bd-fa3c-491b-85ba-7f2d840d4561.jpg" alt="Capa Álbum Motocross Banlek">
                     <div class="gallery-overlay">
@@ -1191,7 +1192,7 @@
                     </div>
                 </a>                
 
-                <!-- ÁLBUM BANLEK 2 (Marcado também como 'recentes' para aparecer ao clicar no filtro) -->
+                <!-- ÁLBUM BANLEK 2 -->
                 <a href="https://banlek.com/album/1aec49" target="_blank" class="gallery-item" data-category="motocross recentes">
                     <img src="https://d2hk32cswy6zx7.cloudfront.net/4d696f20e03994a8be7416a5e8c11fb9/v2_80bc558d-f299-4a39-9673-f1dd6d80e9bb.jpg" alt="Capa Álbum Motocross Banlek">
                     <div class="gallery-overlay">
@@ -1211,7 +1212,7 @@
                     </div>
                 </a>
                 
-                <!-- ÁLBUM BANLEK 2 (Marcado também como 'recentes' para aparecer ao clicar no filtro) -->
+                <!-- ÁLBUM BANLEK 2 -->
                 <a href="https://banlek.com/album/1a3ea6" target="_blank" class="gallery-item" data-category="motocross recentes">
                     <img src="https://d2hk32cswy6zx7.cloudfront.net/42a57f714348b98241b92fb118a38b8e/v2_376f8cae-73c8-431d-a22d-cad3e22bfe5e.jpg" alt="Capa Álbum Motocross Banlek">
                     <div class="gallery-overlay">
@@ -1221,7 +1222,7 @@
                     </div>
                 </a>
                 
-                <!-- ÁLBUM BANLEK 2 (Marcado também como 'recentes' para aparecer ao clicar no filtro) -->
+                <!-- ÁLBUM BANLEK 2 -->
                 <a href="https://banlek.com/album/1a150e" target="_blank" class="gallery-item" data-category="ensaios recentes">
                     <img src="https://d2hk32cswy6zx7.cloudfront.net/2a8696057425ef1c9c68df538bcfe9ce/v2_0f3682f4-7c9f-477c-a862-05bc288f09cc.jpg" alt="Capa Álbum Motocross Banlek">
                     <div class="gallery-overlay">
@@ -1240,7 +1241,6 @@
                         <span class="banlek-btn"><i class="fas fa-external-link-alt"></i> Acessar Álbum Banlek</span>
                     </div>
                 </a>                
-
 
                 <!-- ÁLBUM BANLEK 4 -->
                 <a href="https://banlek.com/album/189267" target="_blank" class="gallery-item" data-category="vaquejada recentes">
@@ -1371,7 +1371,7 @@
                     </div>
                 </a> 
                 
-                <!-- ÁLBUM BANLEK 2 (Marcado também como 'recentes' para aparecer ao clicar no filtro) -->
+                <!-- ÁLBUM BANLEK 2 -->
                 <a href="https://banlek.com/album/11be3f" target="_blank" class="gallery-item" data-category="motocross recentes">
                     <img src="https://d2hk32cswy6zx7.cloudfront.net/bb46b83f3de1a5dee5285bb6dd94a672/v2_b668558c-8d97-4907-b09c-8eb5b6eca9d6.jpg" alt="Capa Álbum Motocross Banlek">
                     <div class="gallery-overlay">
@@ -1389,7 +1389,7 @@
                         <h4 class="gallery-title">CAVALGADA FESTEJO DE SÃO JOÃO BATISTA</h4>
                         <span class="banlek-btn"><i class="fas fa-external-link-alt"></i> Acessar Álbum Banlek</span>
                     </div>
-                </a>               
+                </a>                
 
             </div>
 
@@ -1399,7 +1399,7 @@
         </div>
     </section>
 
-    <!-- SECÇÃO EXCLUSIVA - DESIGN GRÁFICO (APENAS VISUALIZAÇÃO EM LIGHTBOX) -->
+    <!-- SECÇÃO EXCLUSIVA - DESIGN GRÁFICO (AGORA EM CARROSSEL DESLIZANTE) -->
     <section id="design-grafico">
         <div class="section-header">
             <h2 class="section-title">DESIGN GRÁFICO</h2>
@@ -1407,51 +1407,61 @@
             <div class="section-line"></div>
         </div>
 
-        <div class="design-grid">
-            <!-- Arte 1 -->
-            <div class="design-card" onclick="openLightbox('desg.jpeg')">
-                <img src="desg.jpeg" alt="Arte Design 1">
-                <div class="design-overlay">
-                    <div class="design-zoom-icon"><i class="fas fa-search-plus"></i></div>
-                    <h4 class="design-title">Arte / Instagram</h4>
+        <div class="slider-wrapper">
+            <button class="slide-btn prev" onclick="slideDesign('left')">
+                <i class="fas fa-chevron-left"></i>
+            </button>
+
+            <div class="design-slider" id="designSlider">
+                <!-- Arte 1 -->
+                <div class="design-card" onclick="openLightbox('desg.jpeg')">
+                    <img src="desg.jpeg" alt="Arte Design 1">
+                    <div class="design-overlay">
+                        <div class="design-zoom-icon"><i class="fas fa-search-plus"></i></div>
+                        <h4 class="design-title">Arte / Instagram</h4>
+                    </div>
+                </div>
+
+                <!-- Arte 2 -->
+                <div class="design-card" onclick="openLightbox('MONAEL.jpeg')">
+                    <img src="MONAEL.jpeg" alt="Arte Design 2">
+                    <div class="design-overlay">
+                        <div class="design-zoom-icon"><i class="fas fa-search-plus"></i></div>
+                        <h4 class="design-title">Arte / Instagram</h4>
+                    </div>
+                </div>
+                
+                <!-- Arte 3 -->
+                <div class="design-card" onclick="openLightbox('boby.jpeg')">
+                    <img src="boby.jpeg" alt="Arte Design 3">
+                    <div class="design-overlay">
+                        <div class="design-zoom-icon"><i class="fas fa-search-plus"></i></div>
+                        <h4 class="design-title">Arte / Instagram</h4>
+                    </div>
+                </div>            
+
+                <!-- Arte 4 -->
+                <div class="design-card" onclick="openLightbox('Eduardo.jpeg')">
+                    <img src="Eduardo.jpeg" alt="Arte Design 4">
+                    <div class="design-overlay">
+                        <div class="design-zoom-icon"><i class="fas fa-search-plus"></i></div>
+                        <h4 class="design-title">Arte / Instagram</h4>
+                    </div>
+                </div>
+
+                <!-- Arte 5 -->
+                <div class="design-card" onclick="openLightbox('ronaldo.jpeg')">
+                    <img src="ronaldo.jpeg" alt="Arte Design 5">
+                    <div class="design-overlay">
+                        <div class="design-zoom-icon"><i class="fas fa-search-plus"></i></div>
+                        <h4 class="design-title">Arte / Instagram</h4>
+                    </div>
                 </div>
             </div>
 
-            <!-- Arte 2 -->
-            <div class="design-card" onclick="openLightbox('MONAEL.jpeg')">
-                <img src="MONAEL.jpeg" alt="Arte Design 2">
-                <div class="design-overlay">
-                    <div class="design-zoom-icon"><i class="fas fa-search-plus"></i></div>
-                    <h4 class="design-title">Arte / Instagram</h4>
-                </div>
-            </div>
-            
-            <!-- Arte 2 -->
-            <div class="design-card" onclick="openLightbox('boby.jpeg')">
-                <img src="boby.jpeg" alt="Arte Design 2">
-                <div class="design-overlay">
-                    <div class="design-zoom-icon"><i class="fas fa-search-plus"></i></div>
-                    <h4 class="design-title">Arte / Instagram</h4>
-                </div>
-            </div>            
-
-            <!-- Arte 2 -->
-            <div class="design-card" onclick="openLightbox('Eduardo.jpeg')">
-                <img src="Eduardo.jpeg" alt="Arte Design 2">
-                <div class="design-overlay">
-                    <div class="design-zoom-icon"><i class="fas fa-search-plus"></i></div>
-                    <h4 class="design-title">Arte / Instagram</h4>
-                </div>
-            </div>
-
-            <!-- Arte 3 -->
-            <div class="design-card" onclick="openLightbox('ronaldo.jpeg')">
-                <img src="ronaldo.jpeg" alt="Arte Design 3">
-                <div class="design-overlay">
-                    <div class="design-zoom-icon"><i class="fas fa-search-plus"></i></div>
-                    <h4 class="design-title">Arte / Instagram</h4>
-                </div>
-            </div>
+            <button class="slide-btn next" onclick="slideDesign('right')">
+                <i class="fas fa-chevron-right"></i>
+            </button>
         </div>
     </section>
 
@@ -1581,7 +1591,18 @@
             }
         }
 
-        // Filtro da Galeria de Álbuns (Atualizado para aceitar múltiplas categorias por álbum)
+        // Função para deslizar o carrossel do Design Gráfico
+        function slideDesign(direction) {
+            const slider = document.getElementById('designSlider');
+            const scrollAmount = 300;
+            if (direction === 'left') {
+                slider.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+            } else {
+                slider.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+            }
+        }
+
+        // Filtro da Galeria de Álbuns
         const filterBtns = document.querySelectorAll('.filter-btn');
         const galleryItems = document.querySelectorAll('.gallery-item');
 
