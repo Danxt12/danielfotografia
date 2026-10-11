@@ -4,6 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dan XT12 | Fotógrafo & Designer Gráfico</title>
+
+    <!-- Conexão Antecipada para Acelerar Imagens dos Servidores Externos -->
+    <link rel="preconnect" href="https://d2hk32cswy6zx7.cloudfront.net" crossorigin>
+    <link rel="dns-prefetch" href="https://d2hk32cswy6zx7.cloudfront.net">
+    <link rel="preconnect" href="https://d1n3m1hc1oai7d.cloudfront.net" crossorigin>
+    <link rel="dns-prefetch" href="https://d1n3m1hc1oai7d.cloudfront.net">
+
     <!-- Google Fonts & Font Awesome Icons -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -61,7 +68,7 @@
         }
 
         /* ==========================================================================
-           2. NAVEGAÇÃO / HEADER (LOGO DO TOPO AUMENTADO)
+           2. NAVEGAÇÃO / HEADER
            ========================================================================== */
         header {
             position: fixed;
@@ -83,7 +90,6 @@
             align-items: center;
         }
 
-        /* LOGO DO TOPO MAIOR (210px) */
         .logo-brand {
             height: 210px;
             width: auto;
@@ -361,7 +367,7 @@
         }
 
         /* ==========================================================================
-           6. PORTFÓLIO & DESIGN - ESTRUTURA DE CARROSSEL / SLIDER
+           6. PORTFÓLIO & DESIGN
            ========================================================================== */
         .filter-container {
             display: flex;
@@ -418,7 +424,6 @@
             display: none;
         }
 
-        /* CARD CLICÁVEL COM PROPORÇÃO VERTICAL (3/4) */
         .gallery-item {
             flex: 0 0 calc(25% - 19px);
             min-width: 250px;
@@ -497,7 +502,6 @@
             color: #000;
         }
 
-        /* SETAS LATERAIS DOS CARROSSEIS */
         .slide-btn {
             position: absolute;
             top: 50%;
@@ -528,7 +532,7 @@
         .slide-btn.next { right: -15px; }
 
         /* ==========================================================================
-           7. SECÇÃO EXCLUSIVA - DESIGN GRÁFICO (CARROSSEL DESLIZANTE)
+           7. DESIGN GRÁFICO
            ========================================================================== */
         .design-card {
             flex: 0 0 calc(25% - 19px);
@@ -600,7 +604,7 @@
         }
 
         /* ==========================================================================
-           8. SERVIÇOS & PACOTES
+           8. SERVIÇOS
            ========================================================================== */
         .services-grid {
             display: grid;
@@ -737,7 +741,7 @@
         }
 
         /* ==========================================================================
-           10. FOOTER, MODAL & FLOATING BUTTONS (LOGO DO FINAL AUMENTADO)
+           10. FOOTER, MODAL & FLOATING BUTTONS
            ========================================================================== */
         footer {
             background: #07080a;
@@ -755,7 +759,6 @@
             gap: 25px;
         }
 
-        /* LOGO DO FINAL MAIOR (200px) */
         .footer-logo {
             height: 200px;
             width: auto;
@@ -816,7 +819,6 @@
             box-shadow: 0 8px 25px rgba(37, 211, 102, 0.6);
         }
 
-        /* LIGHTBOX MODAL PARA AMPLIAÇÃO DE IMAGEM DO DESIGN */
         .lightbox {
             position: fixed;
             inset: 0;
@@ -854,7 +856,6 @@
             color: var(--accent-cyan);
         }
 
-        /* RESPONSIVO */
         @media (max-width: 992px) {
             .about-grid, .contact-container {
                 grid-template-columns: 1fr;
@@ -953,12 +954,12 @@
     <section id="sobre">
         <div class="about-grid">
             <div class="about-img-box">
-                <img src="Red Gradient Profile Photo Instagram Post.jpg" alt="Daniel Dan XT12 Fotógrafo">
+                <img src="Red Gradient Profile Photo Instagram Post.jpg" alt="Daniel Dan XT12 Fotógrafo" loading="lazy" decoding="async">
             </div>
             <div class="about-text">
                 <span class="section-subtitle-albums" style="font-size: 0.85rem; margin-bottom: 10px;">CONHECE O FOTÓGRAFO</span>
                 <h3>DANIEL — DAN XT12</h3>
-                <p>Sou fotógrafo e designer gráfico apaixonado pela adrenalina, movimento e expressões autênticas. Especializei-me na cobertura de eventos esportivos de alta velocidade como o motocross, capturando momentos épicos com precisão milimétrica.</p>
+                <p>Sou fotógrafo e designer gráfico apaixonado pela adrenaline, movimento e expressões autênticas. Especializei-me na cobertura de eventos esportivos de alta velocidade como o motocross, capturando momentos épicos com precisão milimétrica.</p>
                 <p>Unindo a fotografia de alta performance ao design gráfico, entrego um trabalho completo: desde o disparo no terreno até à arte final para redes sociais e imprensa.</p>
 
                 <div class="stats-grid">
@@ -979,7 +980,7 @@
         </div>
     </section>
 
-    <!-- PORTFÓLIO - ÁLBUNS BANLEK (COM ABA RECENTES LOGO APÓS TODOS) -->
+    <!-- PORTFÓLIO - ÁLBUNS BANLEK -->
     <section id="portfolio" style="background: rgba(20, 23, 29, 0.4);">
         <div class="section-header">
             <h2 class="section-title">PORTFÓLIO EM DESTAQUE</h2>
@@ -987,7 +988,6 @@
             <div class="section-line"></div>
         </div>
 
-        <!-- FILTROS DAS MODALIDADES (INCLUI 'RECENTES' LOGO APÓS 'TODOS') -->
         <div class="filter-container">
             <button class="filter-btn active" data-filter="all">Todos</button>
             <button class="filter-btn" data-filter="recentes">Recentes</button>
@@ -1013,9 +1013,8 @@
 
             <div class="gallery-slider" id="gallerySlider">
                 
-                <!-- ÁLBUM BANLEK 1 -->
                 <a href="https://banlek.com/album/2734b9" target="_blank" class="gallery-item" data-category="beachtennis recentes">
-                    <img src="https://d2hk32cswy6zx7.cloudfront.net/a176b2905ad0eb52c0b80cc1cc697eb6/v2_727c3dd3-5d28-4c40-984e-d91038f8f4e8.jpg" alt="Capa Álbum Motocross Banlek">
+                    <img src="https://d2hk32cswy6zx7.cloudfront.net/a176b2905ad0eb52c0b80cc1cc697eb6/v2_727c3dd3-5d28-4c40-984e-d91038f8f4e8.jpg" alt="Capa Álbum Beach Tennis" loading="lazy" decoding="async">
                     <div class="gallery-overlay">
                         <span class="gallery-category">BEACH TENNIS</span>
                         <h4 class="gallery-title">Quarta Dobrada de Beach tennis LBS</h4>
@@ -1023,9 +1022,8 @@
                     </div>
                 </a>
 
-                <!-- ÁLBUM BANLEK 3 -->
                 <a href="https://banlek.com/album/270a12" target="_blank" class="gallery-item" data-category="futevolei recentes">
-                    <img src="https://d2hk32cswy6zx7.cloudfront.net/d655ea712f91ffb3608e916a57b07cad/v2_71f824c7-a24b-4ab6-aa3a-97c881e24047.jpg" alt="Capa Beach Tennis">
+                    <img src="https://d2hk32cswy6zx7.cloudfront.net/d655ea712f91ffb3608e916a57b07cad/v2_71f824c7-a24b-4ab6-aa3a-97c881e24047.jpg" alt="Capa Futevôlei" loading="lazy" decoding="async">
                     <div class="gallery-overlay">
                         <span class="gallery-category">FUTEVÔLEI</span>
                         <h4 class="gallery-title">Futevôlei</h4>
@@ -1033,9 +1031,8 @@
                     </div>
                 </a>
 
-                <!-- ÁLBUM BANLEK 2 -->
                 <a href="https://banlek.com/album/268d50" target="_blank" class="gallery-item" data-category="futebol recentes">
-                    <img src="https://d2hk32cswy6zx7.cloudfront.net/52535f469eda35743d99a063228d5724/v2_b5f3672b-d083-4ed5-a288-a60d48224cb5.jpg" alt="Capa Futebol">
+                    <img src="https://d2hk32cswy6zx7.cloudfront.net/52535f469eda35743d99a063228d5724/v2_b5f3672b-d083-4ed5-a288-a60d48224cb5.jpg" alt="Capa Futebol" loading="lazy" decoding="async">
                     <div class="gallery-overlay">
                         <span class="gallery-category">FUTEBOL</span>
                         <h4 class="gallery-title">Amistoso aabb</h4>
@@ -1043,9 +1040,8 @@
                     </div>
                 </a>
 
-                <!-- ÁLBUM BANLEK 1 -->
                 <a href="https://banlek.com/album/25fa6b" target="_blank" class="gallery-item" data-category="beachtennis volei futevolei recentes">
-                    <img src="https://d2hk32cswy6zx7.cloudfront.net/b2fd1cb74ffe4d79a33ffcb9053ad421/v2_92864580-d1bb-4d5c-b40a-13b8d0a5eb71.jpg" alt="Capa Álbum Motocross Banlek">
+                    <img src="https://d2hk32cswy6zx7.cloudfront.net/b2fd1cb74ffe4d79a33ffcb9053ad421/v2_92864580-d1bb-4d5c-b40a-13b8d0a5eb71.jpg" alt="Capa Lagoa Beach" loading="lazy" decoding="async">
                     <div class="gallery-overlay">
                         <span class="gallery-category">BEACH TENNIS/VÔLEI/FUTEVÔLEI</span>
                         <h4 class="gallery-title">Lagoa Beach</h4>
@@ -1053,9 +1049,8 @@
                     </div>
                 </a>
 
-                <!-- ÁLBUM BANLEK 1 -->
                 <a href="https://banlek.com/album/25f631" target="_blank" class="gallery-item" data-category="volei recentes">
-                    <img src="https://d2hk32cswy6zx7.cloudfront.net/94978164b7e12acfe68b44cfe77b5419/v2_e2683e0b-21f5-4126-8296-51d61fca93f3.jpg" alt="Capa Álbum Motocross Banlek">
+                    <img src="https://d2hk32cswy6zx7.cloudfront.net/94978164b7e12acfe68b44cfe77b5419/v2_e2683e0b-21f5-4126-8296-51d61fca93f3.jpg" alt="Capa Vôlei" loading="lazy" decoding="async">
                     <div class="gallery-overlay">
                         <span class="gallery-category">VÔLEI</span>
                         <h4 class="gallery-title">Vôlei Lagoa Beach</h4>
@@ -1063,9 +1058,8 @@
                     </div>
                 </a>
 
-                <!-- ÁLBUM BANLEK 1 -->
                 <a href="https://banlek.com/album/25f2ef" target="_blank" class="gallery-item" data-category="beachtennis recentes">
-                    <img src="https://d2hk32cswy6zx7.cloudfront.net/8a78698febc180cd81e65c414c628a3f/v2_a2e0bb10-2b7d-4427-9abc-e86d576628ed.jpg" alt="Capa Álbum Motocross Banlek">
+                    <img src="https://d2hk32cswy6zx7.cloudfront.net/8a78698febc180cd81e65c414c628a3f/v2_a2e0bb10-2b7d-4427-9abc-e86d576628ed.jpg" alt="Capa Beach Tennis Treino" loading="lazy" decoding="async">
                     <div class="gallery-overlay">
                         <span class="gallery-category">BEACH TENNIS</span>
                         <h4 class="gallery-title">Lagoa Beach Treino</h4>
@@ -1073,9 +1067,8 @@
                     </div>
                 </a>
 
-                <!-- ÁLBUM BANLEK 2 -->
                 <a href="https://banlek.com/album/25c64b" target="_blank" class="gallery-item" data-category="futebol recentes">
-                    <img src="https://d2hk32cswy6zx7.cloudfront.net/115d5234a9d92c0353ec5a92cb05843f/v2_84156cf0-6cd8-4441-aca9-4cd3e13d06ac.jpg" alt="Capa Futebol">
+                    <img src="https://d2hk32cswy6zx7.cloudfront.net/115d5234a9d92c0353ec5a92cb05843f/v2_84156cf0-6cd8-4441-aca9-4cd3e13d06ac.jpg" alt="Capa Treino AABB" loading="lazy" decoding="async">
                     <div class="gallery-overlay">
                         <span class="gallery-category">FUTEBOL</span>
                         <h4 class="gallery-title">TREINO AABB</h4>
@@ -1083,9 +1076,8 @@
                     </div>
                 </a>
                 
-                <!-- ÁLBUM BANLEK 2 -->
                 <a href="https://banlek.com/album/25aaa6" target="_blank" class="gallery-item" data-category="futebol recentes">
-                    <img src="https://d2hk32cswy6zx7.cloudfront.net/558641dfd3e6f0fb7b1173d16542e2bc/v2_55c0a422-6a66-4da2-bb89-240d206cced3.jpg" alt="Capa Futebol">
+                    <img src="https://d2hk32cswy6zx7.cloudfront.net/558641dfd3e6f0fb7b1173d16542e2bc/v2_55c0a422-6a66-4da2-bb89-240d206cced3.jpg" alt="Capa Treino AABB" loading="lazy" decoding="async">
                     <div class="gallery-overlay">
                         <span class="gallery-category">FUTEBOL</span>
                         <h4 class="gallery-title">TREINO AABB</h4>
@@ -1093,9 +1085,8 @@
                     </div>
                 </a>
 
-                <!-- ÁLBUM BANLEK 2 -->
                 <a href="https://banlek.com/album/24ac38" target="_blank" class="gallery-item" data-category="futebol recentes">
-                    <img src="https://d2hk32cswy6zx7.cloudfront.net/caeff99ff82dbda35766ac5342819fe2/v2_6c13435b-b3c5-4bc9-a8f8-31d3c0271339.jpg" alt="Capa Futebol">
+                    <img src="https://d2hk32cswy6zx7.cloudfront.net/caeff99ff82dbda35766ac5342819fe2/v2_6c13435b-b3c5-4bc9-a8f8-31d3c0271339.jpg" alt="Capa Nazaré x Gato" loading="lazy" decoding="async">
                     <div class="gallery-overlay">
                         <span class="gallery-category">FUTEBOL</span>
                         <h4 class="gallery-title">Nazaré x Gato</h4>
@@ -1103,19 +1094,17 @@
                     </div>
                 </a>
 
-                <!-- ÁLBUM BANLEK 2 -->
                 <a href="https://banlek.com/album/24a722" target="_blank" class="gallery-item" data-category="futebol recentes">
-                    <img src="https://d1n3m1hc1oai7d.cloudfront.net/59ab060711dfd0ac44a8a15b38843613/2ea95b0a50202ba7df0edba172d197b8_thumbnail.jpg" alt="Capa Futebol">
+                    <img src="https://d1n3m1hc1oai7d.cloudfront.net/59ab060711dfd0ac44a8a15b38843613/2ea95b0a50202ba7df0edba172d197b8_thumbnail.jpg" alt="Capa Naza x Juça" loading="lazy" decoding="async">
                     <div class="gallery-overlay">
                         <span class="gallery-category">FUTEBOL VIDEOS</span>
-                        <h4 class="gallery-title">Naza x Juça </h4>
+                        <h4 class="gallery-title">Naza x Juça</h4>
                         <span class="banlek-btn"><i class="fas fa-external-link-alt"></i> Acessar Álbum Banlek</span>
                     </div>
                 </a> 
                 
-                <!-- ÁLBUM BANLEK 2 -->
                 <a href="https://banlek.com/album/244df1" target="_blank" class="gallery-item" data-category="futebol recentes">
-                    <img src="https://d2hk32cswy6zx7.cloudfront.net/42e53a0fa004ede443653ac306c35b0b/v2_5099ec68-fb00-408c-b14c-7c513dc4c97f.jpg" alt="Capa Futebol">
+                    <img src="https://d2hk32cswy6zx7.cloudfront.net/42e53a0fa004ede443653ac306c35b0b/v2_5099ec68-fb00-408c-b14c-7c513dc4c97f.jpg" alt="Capa Vista Alegre x Juçara" loading="lazy" decoding="async">
                     <div class="gallery-overlay">
                         <span class="gallery-category">FUTEBOL</span>
                         <h4 class="gallery-title">Vista alegre x Juçara</h4>
@@ -1123,9 +1112,8 @@
                     </div>
                 </a>  
                 
-                <!-- ÁLBUM BANLEK 2 -->
                 <a href="https://banlek.com/album/24467c" target="_blank" class="gallery-item" data-category="cavalgada recentes">
-                    <img src="https://d2hk32cswy6zx7.cloudfront.net/41ef2c2e544de87d7f74d820255df82b/v2_4bf6b455-11df-4c6a-89f8-f5c01696354a.jpg" alt="Capa Futebol">
+                    <img src="https://d2hk32cswy6zx7.cloudfront.net/41ef2c2e544de87d7f74d820255df82b/v2_4bf6b455-11df-4c6a-89f8-f5c01696354a.jpg" alt="Capa Cavalgada Mucambo" loading="lazy" decoding="async">
                     <div class="gallery-overlay">
                         <span class="gallery-category">CAVALGADA</span>
                         <h4 class="gallery-title">Cavalgada Pov.Mucambo</h4>
@@ -1133,9 +1121,8 @@
                     </div>
                 </a>
                 
-                <!-- ÁLBUM BANLEK 2 -->
                 <a href="https://banlek.com/album/23f642" target="_blank" class="gallery-item" data-category="futebol recentes">
-                    <img src="https://d2hk32cswy6zx7.cloudfront.net/f180723653c341979254bcebfe29662e/v2_2d3fd167-5616-42a5-9a0d-6eb8a2be4d14.jpg" alt="Capa Futebol">
+                    <img src="https://d2hk32cswy6zx7.cloudfront.net/f180723653c341979254bcebfe29662e/v2_2d3fd167-5616-42a5-9a0d-6eb8a2be4d14.jpg" alt="Capa Juça x Naza" loading="lazy" decoding="async">
                     <div class="gallery-overlay">
                         <span class="gallery-category">FUTEBOL</span>
                         <h4 class="gallery-title">Juça x Naza</h4>
@@ -1143,9 +1130,8 @@
                     </div>
                 </a> 
                 
-                <!-- ÁLBUM BANLEK 2 -->
                 <a href="https://banlek.com/album/23cc46" target="_blank" class="gallery-item" data-category="futebol recentes">
-                    <img src="https://d2hk32cswy6zx7.cloudfront.net/eaa0a181e32abdd52a7b508968d5ca51/v2_fff99c05-5654-4d2d-b9ab-c4b0dd4fe6e3.jpg" alt="Capa Futebol">
+                    <img src="https://d2hk32cswy6zx7.cloudfront.net/eaa0a181e32abdd52a7b508968d5ca51/v2_fff99c05-5654-4d2d-b9ab-c4b0dd4fe6e3.jpg" alt="Capa Futebol Feminino" loading="lazy" decoding="async">
                     <div class="gallery-overlay">
                         <span class="gallery-category">FUTEBOL</span>
                         <h4 class="gallery-title">Partida Feminina Naza</h4>
@@ -1153,19 +1139,17 @@
                     </div>
                 </a>
                 
-                <!-- ÁLBUM BANLEK 2 -->
                 <a href="https://banlek.com/album/23cb36" target="_blank" class="gallery-item" data-category="cavalgada recentes">
-                    <img src="https://d2hk32cswy6zx7.cloudfront.net/ac2d2b5847cfb98b4cbbc7dde5a152c6/v2_90e163c4-dd52-41cc-a386-438b1819f884.jpg" alt="Capa Futebol">
+                    <img src="https://d2hk32cswy6zx7.cloudfront.net/ac2d2b5847cfb98b4cbbc7dde5a152c6/v2_90e163c4-dd52-41cc-a386-438b1819f884.jpg" alt="Capa Cavalgada Juçara" loading="lazy" decoding="async">
                     <div class="gallery-overlay">
-                        <span class="gallery-category">CAVALDAGA</span>
+                        <span class="gallery-category">CAVALGADA</span>
                         <h4 class="gallery-title">Cavalgada Pov.Juçara</h4>
                         <span class="banlek-btn"><i class="fas fa-external-link-alt"></i> Acessar Álbum Banlek</span>
                     </div>
                 </a>
                 
-                <!-- ÁLBUM BANLEK 2 -->
                 <a href="https://banlek.com/album/23ba47" target="_blank" class="gallery-item" data-category="futebol recentes">
-                    <img src="https://d2hk32cswy6zx7.cloudfront.net/89be6331d234f3e0ea8f04d42a653b7f/v2_d6b6e565-0d80-4461-a527-5f3aa8ea0d39.jpg" alt="Capa Futebol">
+                    <img src="https://d2hk32cswy6zx7.cloudfront.net/89be6331d234f3e0ea8f04d42a653b7f/v2_d6b6e565-0d80-4461-a527-5f3aa8ea0d39.jpg" alt="Capa Naza x Juçara" loading="lazy" decoding="async">
                     <div class="gallery-overlay">
                         <span class="gallery-category">FUTEBOL</span>
                         <h4 class="gallery-title">Naza x Juçara</h4>
@@ -1173,9 +1157,8 @@
                     </div>
                 </a>
                 
-                <!-- ÁLBUM BANLEK 2 -->
                 <a href="https://banlek.com/album/21c155" target="_blank" class="gallery-item" data-category="futsal recentes">
-                    <img src="https://d2hk32cswy6zx7.cloudfront.net/68541a392d87ae670c598b49837220f6/v2_663e75c0-3d3f-4b18-8413-e3301af12614.jpg" alt="Capa Futebol">
+                    <img src="https://d2hk32cswy6zx7.cloudfront.net/68541a392d87ae670c598b49837220f6/v2_663e75c0-3d3f-4b18-8413-e3301af12614.jpg" alt="Capa Futsal Jiac" loading="lazy" decoding="async">
                     <div class="gallery-overlay">
                         <span class="gallery-category">FUTSAL</span>
                         <h4 class="gallery-title">Jiac</h4>
@@ -1183,9 +1166,8 @@
                     </div>
                 </a>                
 
-                <!-- ÁLBUM BANLEK 2 -->
                 <a href="https://banlek.com/album/1e5f67" target="_blank" class="gallery-item" data-category="motocross recentes">
-                    <img src="https://d2hk32cswy6zx7.cloudfront.net/94d582808a895ffac693ec9a8aefaf5f/v2_7d28d7bd-fa3c-491b-85ba-7f2d840d4561.jpg" alt="Capa Álbum Motocross Banlek">
+                    <img src="https://d2hk32cswy6zx7.cloudfront.net/94d582808a895ffac693ec9a8aefaf5f/v2_7d28d7bd-fa3c-491b-85ba-7f2d840d4561.jpg" alt="Capa Motocross" loading="lazy" decoding="async">
                     <div class="gallery-overlay">
                         <span class="gallery-category">MOTOCROSS & AÇÃO</span>
                         <h4 class="gallery-title">3º Trilha dos Amigos</h4>
@@ -1193,9 +1175,8 @@
                     </div>
                 </a>
 
-                <!-- ÁLBUM BANLEK 2 -->
                 <a href="https://banlek.com/album/1b8277" target="_blank" class="gallery-item" data-category="futebol recentes">
-                    <img src="https://d2hk32cswy6zx7.cloudfront.net/6e3daa190560cabafa0b2f4628664640/v2_8a307d3d-96cd-473e-9adf-d5331a081d70.jpg" alt="Capa Futebol">
+                    <img src="https://d2hk32cswy6zx7.cloudfront.net/6e3daa190560cabafa0b2f4628664640/v2_8a307d3d-96cd-473e-9adf-d5331a081d70.jpg" alt="Capa Torneio Futebol" loading="lazy" decoding="async">
                     <div class="gallery-overlay">
                         <span class="gallery-category">FUTEBOL</span>
                         <h4 class="gallery-title">TORNEIO</h4>
@@ -1203,9 +1184,8 @@
                     </div>
                 </a>                
 
-                <!-- ÁLBUM BANLEK 2 -->
                 <a href="https://banlek.com/album/1aec49" target="_blank" class="gallery-item" data-category="motocross recentes">
-                    <img src="https://d2hk32cswy6zx7.cloudfront.net/4d696f20e03994a8be7416a5e8c11fb9/v2_80bc558d-f299-4a39-9673-f1dd6d80e9bb.jpg" alt="Capa Álbum Motocross Banlek">
+                    <img src="https://d2hk32cswy6zx7.cloudfront.net/4d696f20e03994a8be7416a5e8c11fb9/v2_80bc558d-f299-4a39-9673-f1dd6d80e9bb.jpg" alt="Capa Rally Furiosas" loading="lazy" decoding="async">
                     <div class="gallery-overlay">
                         <span class="gallery-category">MOTOCROSS & AÇÃO</span>
                         <h4 class="gallery-title">Rally Das Furiosas</h4>
@@ -1213,9 +1193,8 @@
                     </div>
                 </a>
 
-                <!-- ÁLBUM BANLEK 2 -->
                 <a href="https://banlek.com/album/1a5d19" target="_blank" class="gallery-item" data-category="futebol recentes">
-                    <img src="https://d2hk32cswy6zx7.cloudfront.net/e54365fb7d6cb9f50eca98b716b37065/v2_c03ce9fd-4cd4-4930-b339-3604ab2684c7.jpg" alt="Capa Futebol">
+                    <img src="https://d2hk32cswy6zx7.cloudfront.net/e54365fb7d6cb9f50eca98b716b37065/v2_c03ce9fd-4cd4-4930-b339-3604ab2684c7.jpg" alt="Capa Gato x Juçara" loading="lazy" decoding="async">
                     <div class="gallery-overlay">
                         <span class="gallery-category">FUTEBOL</span>
                         <h4 class="gallery-title">GATO X JUÇARA</h4>
@@ -1223,9 +1202,8 @@
                     </div>
                 </a>
                 
-                <!-- ÁLBUM BANLEK 2 -->
                 <a href="https://banlek.com/album/1a3ea6" target="_blank" class="gallery-item" data-category="motocross recentes">
-                    <img src="https://d2hk32cswy6zx7.cloudfront.net/42a57f714348b98241b92fb118a38b8e/v2_376f8cae-73c8-431d-a22d-cad3e22bfe5e.jpg" alt="Capa Álbum Motocross Banlek">
+                    <img src="https://d2hk32cswy6zx7.cloudfront.net/42a57f714348b98241b92fb118a38b8e/v2_376f8cae-73c8-431d-a22d-cad3e22bfe5e.jpg" alt="Capa Trilha Papa-léguas" loading="lazy" decoding="async">
                     <div class="gallery-overlay">
                         <span class="gallery-category">MOTOCROSS & AÇÃO</span>
                         <h4 class="gallery-title">Trilha Papa-léguas</h4>
@@ -1233,9 +1211,8 @@
                     </div>
                 </a>
                 
-                <!-- ÁLBUM BANLEK 2 -->
                 <a href="https://banlek.com/album/1a150e" target="_blank" class="gallery-item" data-category="ensaios recentes">
-                    <img src="https://d2hk32cswy6zx7.cloudfront.net/2a8696057425ef1c9c68df538bcfe9ce/v2_0f3682f4-7c9f-477c-a862-05bc288f09cc.jpg" alt="Capa Álbum Motocross Banlek">
+                    <img src="https://d2hk32cswy6zx7.cloudfront.net/2a8696057425ef1c9c68df538bcfe9ce/v2_0f3682f4-7c9f-477c-a862-05bc288f09cc.jpg" alt="Capa Ensaio Kayla" loading="lazy" decoding="async">
                     <div class="gallery-overlay">
                         <span class="gallery-category">ENSAIOS</span>
                         <h4 class="gallery-title">Aniversário de Kayla</h4>
@@ -1243,9 +1220,8 @@
                     </div>
                 </a>
                 
-                <!-- ÁLBUM BANLEK 2 -->
                 <a href="https://banlek.com/album/18aac4" target="_blank" class="gallery-item" data-category="futebol recentes">
-                    <img src="https://d2hk32cswy6zx7.cloudfront.net/99326995748d070ceb99e9bd6da1c793/v2_6b706e72-a3a9-440a-bb2b-a47e7d557c67.jpg" alt="Capa Futebol">
+                    <img src="https://d2hk32cswy6zx7.cloudfront.net/99326995748d070ceb99e9bd6da1c793/v2_6b706e72-a3a9-440a-bb2b-a47e7d557c67.jpg" alt="Capa Campertino x Cohab" loading="lazy" decoding="async">
                     <div class="gallery-overlay">
                         <span class="gallery-category">FUTEBOL</span>
                         <h4 class="gallery-title">CAMPERTINO X COAHAB</h4>
@@ -1253,9 +1229,8 @@
                     </div>
                 </a>                
 
-                <!-- ÁLBUM BANLEK 4 -->
                 <a href="https://banlek.com/album/189267" target="_blank" class="gallery-item" data-category="vaquejada recentes">
-                    <img src="https://d2hk32cswy6zx7.cloudfront.net/b0146b3801050306c11d0985672520e3/v2_0af4e105-1b6c-4755-9894-a58d447cb040.jpg" alt="Capa Vaquejada">
+                    <img src="https://d2hk32cswy6zx7.cloudfront.net/b0146b3801050306c11d0985672520e3/v2_0af4e105-1b6c-4755-9894-a58d447cb040.jpg" alt="Capa Vaquejada Mucambo" loading="lazy" decoding="async">
                     <div class="gallery-overlay">
                         <span class="gallery-category">VAQUEJADA</span>
                         <h4 class="gallery-title">VAQUEJADA.POV MUCAMBO</h4>
@@ -1263,9 +1238,8 @@
                     </div>
                 </a>
 
-                <!-- ÁLBUM BANLEK 2 -->
                 <a href="https://banlek.com/album/16c939" target="_blank" class="gallery-item" data-category="futebol recentes">
-                    <img src="https://d2hk32cswy6zx7.cloudfront.net/ee1a9d110b45b7210913517de2a4a130/v2_2fc41d16-e443-4847-8fca-0bd9a6f50f89.jpg" alt="Capa Futebol">
+                    <img src="https://d2hk32cswy6zx7.cloudfront.net/ee1a9d110b45b7210913517de2a4a130/v2_2fc41d16-e443-4847-8fca-0bd9a6f50f89.jpg" alt="Capa Campeonato" loading="lazy" decoding="async">
                     <div class="gallery-overlay">
                         <span class="gallery-category">FUTEBOL</span>
                         <h4 class="gallery-title">CAMPEONATO</h4>
@@ -1273,9 +1247,8 @@
                     </div>
                 </a>
                 
-                <!-- ÁLBUM BANLEK 4 -->
                 <a href="https://banlek.com/album/169134" target="_blank" class="gallery-item" data-category="vaquejada recentes">
-                    <img src="https://d2hk32cswy6zx7.cloudfront.net/e17997ab8a4a0edc220d80b42d6d2b97/v2_6f56c579-2565-48cf-b710-334060e6e6f7.jpg" alt="Capa Vaquejada">
+                    <img src="https://d2hk32cswy6zx7.cloudfront.net/e17997ab8a4a0edc220d80b42d6d2b97/v2_6f56c579-2565-48cf-b710-334060e6e6f7.jpg" alt="Capa Vaquejada Calumbí" loading="lazy" decoding="async">
                     <div class="gallery-overlay">
                         <span class="gallery-category">VAQUEJADA</span>
                         <h4 class="gallery-title">Vaquejada Fazenda Calumbí</h4>
@@ -1283,9 +1256,8 @@
                     </div>
                 </a>
                 
-                <!-- ÁLBUM BANLEK 2 -->
                 <a href="https://banlek.com/album/15ec28" target="_blank" class="gallery-item" data-category="futebol recentes">
-                    <img src="https://d2hk32cswy6zx7.cloudfront.net/937dde87af1ffdc34d12e8c9da084e4f/v2_7bfc209a-3a9b-4e74-8b6a-050dc63732f1.jpg" alt="Capa Futebol">
+                    <img src="https://d2hk32cswy6zx7.cloudfront.net/937dde87af1ffdc34d12e8c9da084e4f/v2_7bfc209a-3a9b-4e74-8b6a-050dc63732f1.jpg" alt="Capa Galáticos x Juçara" loading="lazy" decoding="async">
                     <div class="gallery-overlay">
                         <span class="gallery-category">FUTEBOL</span>
                         <h4 class="gallery-title">GALÁTICOS FC X JUÇARA FC</h4>
@@ -1293,9 +1265,8 @@
                     </div>
                 </a>
                 
-                <!-- ÁLBUM BANLEK 2 -->
                 <a href="https://banlek.com/album/157a13" target="_blank" class="gallery-item" data-category="futebol recentes">
-                    <img src="https://d2hk32cswy6zx7.cloudfront.net/2d78c53c7274335a7fe312ff7a4811db/v2_d44314aa-49a5-4e3d-ad2a-3b1c52387f94.jpg" alt="Capa Futebol">
+                    <img src="https://d2hk32cswy6zx7.cloudfront.net/2d78c53c7274335a7fe312ff7a4811db/v2_d44314aa-49a5-4e3d-ad2a-3b1c52387f94.jpg" alt="Capa Campeonato Campertino" loading="lazy" decoding="async">
                     <div class="gallery-overlay">
                         <span class="gallery-category">FUTEBOL</span>
                         <h4 class="gallery-title">CAMPEONATO POV.COMPERTINO</h4>
@@ -1303,9 +1274,8 @@
                     </div>
                 </a>
                 
-                <!-- ÁLBUM BANLEK 4 -->
                 <a href="https://banlek.com/album/13f468" target="_blank" class="gallery-item" data-category="vaquejada recentes">
-                    <img src="https://d2hk32cswy6zx7.cloudfront.net/e5b6aef9d503ed645a0906609145cc41/v2_2078c1d4-324a-4753-a546-2e3fecead278.jpg" alt="Capa Vaquejada">
+                    <img src="https://d2hk32cswy6zx7.cloudfront.net/e5b6aef9d503ed645a0906609145cc41/v2_2078c1d4-324a-4753-a546-2e3fecead278.jpg" alt="Capa Vaquejada Mucambo" loading="lazy" decoding="async">
                     <div class="gallery-overlay">
                         <span class="gallery-category">VAQUEJADA</span>
                         <h4 class="gallery-title">Vaquejada Pov.Mucambo</h4>
@@ -1313,9 +1283,8 @@
                     </div>
                 </a> 
                 
-                <!-- ÁLBUM BANLEK 2 -->
                 <a href="https://banlek.com/album/128e24" target="_blank" class="gallery-item" data-category="futebol recentes">
-                    <img src="https://d2hk32cswy6zx7.cloudfront.net/1743ef96425e0f5ebc6aba7b1aa3df1e/v2_af347ae5-2309-4eae-b7c9-6ecb2c8436c9.jpg" alt="Capa Futebol">
+                    <img src="https://d2hk32cswy6zx7.cloudfront.net/1743ef96425e0f5ebc6aba7b1aa3df1e/v2_af347ae5-2309-4eae-b7c9-6ecb2c8436c9.jpg" alt="Capa Naza x Juça" loading="lazy" decoding="async">
                     <div class="gallery-overlay">
                         <span class="gallery-category">FUTEBOL</span>
                         <h4 class="gallery-title">Naza base x Juça união fc</h4>
@@ -1323,9 +1292,8 @@
                     </div>
                 </a>
                 
-                <!-- ÁLBUM BANLEK 2 -->
                 <a href="https://banlek.com/album/128278" target="_blank" class="gallery-item" data-category="futebol recentes">
-                    <img src="https://d2hk32cswy6zx7.cloudfront.net/d0380f251fcdb4b60f42c32c344d39ed/v2_22a68b75-0076-4e89-ba11-5f9fbdd3ebe1.jpg" alt="Capa Futebol">
+                    <img src="https://d2hk32cswy6zx7.cloudfront.net/d0380f251fcdb4b60f42c32c344d39ed/v2_22a68b75-0076-4e89-ba11-5f9fbdd3ebe1.jpg" alt="Capa Juçara x Aldeia" loading="lazy" decoding="async">
                     <div class="gallery-overlay">
                         <span class="gallery-category">FUTEBOL</span>
                         <h4 class="gallery-title">JUÇARA X ALDEIA</h4>
@@ -1333,19 +1301,17 @@
                     </div>
                 </a>
                 
-                <!-- ÁLBUM BANLEK 4 -->
                 <a href="https://banlek.com/album/124c38" target="_blank" class="gallery-item" data-category="vaquejada recentes">
-                    <img src="https://d2hk32cswy6zx7.cloudfront.net/a5f60922c71629b10cebe5dd456dc324/v2_c1f22690-9766-4a53-a300-997d8324d862.jpg" alt="Capa Vaquejada">
+                    <img src="https://d2hk32cswy6zx7.cloudfront.net/a5f60922c71629b10cebe5dd456dc324/v2_c1f22690-9766-4a53-a300-997d8324d862.jpg" alt="Capa Vaquejada Boa Vista" loading="lazy" decoding="async">
                     <div class="gallery-overlay">
                         <span class="gallery-category">VAQUEJADA</span>
-                        <h4 class="gallery-title">Vaquejada POV.BOA VISTA </h4>
+                        <h4 class="gallery-title">Vaquejada POV.BOA VISTA</h4>
                         <span class="banlek-btn"><i class="fas fa-external-link-alt"></i> Acessar Álbum Banlek</span>
                     </div>
                 </a>
                 
-                <!-- ÁLBUM BANLEK 2 -->
                 <a href="https://banlek.com/album/122f69" target="_blank" class="gallery-item" data-category="futebol recentes">
-                    <img src="https://d2hk32cswy6zx7.cloudfront.net/c393c69fe31b78b6edf752317e54e2b1/v2_d91d05fb-4609-4a25-86e3-8e512230eada.jpg" alt="Capa Futebol">
+                    <img src="https://d2hk32cswy6zx7.cloudfront.net/c393c69fe31b78b6edf752317e54e2b1/v2_d91d05fb-4609-4a25-86e3-8e512230eada.jpg" alt="Capa Juça x NZ" loading="lazy" decoding="async">
                     <div class="gallery-overlay">
                         <span class="gallery-category">FUTEBOL</span>
                         <h4 class="gallery-title">JUÇA UNIÃO FC X NZ BASE</h4>
@@ -1353,9 +1319,8 @@
                     </div>
                 </a>
                 
-                <!-- ÁLBUM BANLEK 4 -->
                 <a href="https://banlek.com/album/1208e6" target="_blank" class="gallery-item" data-category="vaquejada recentes">
-                    <img src="https://d2hk32cswy6zx7.cloudfront.net/5ec3e13d0d07289639e73d81c21fa7bd/v2_b23ba268-b053-41b2-819f-ed4bd1142a66.jpg" alt="Capa Vaquejada">
+                    <img src="https://d2hk32cswy6zx7.cloudfront.net/5ec3e13d0d07289639e73d81c21fa7bd/v2_b23ba268-b053-41b2-819f-ed4bd1142a66.jpg" alt="Capa Vaquejada Santa Luzia" loading="lazy" decoding="async">
                     <div class="gallery-overlay">
                         <span class="gallery-category">VAQUEJADA</span>
                         <h4 class="gallery-title">Vaquejada POV.Fazenda Santa Luzia</h4>
@@ -1363,9 +1328,8 @@
                     </div>
                 </a> 
                 
-                <!-- ÁLBUM BANLEK 2 -->
                 <a href="https://banlek.com/album/11eacb" target="_blank" class="gallery-item" data-category="futebol recentes">
-                    <img src="https://d2hk32cswy6zx7.cloudfront.net/f37bcc0c5aa07a9cec787fce2a6fa166/v2_86c68d3a-1bfd-453d-98ab-c89954a1b673.jpg" alt="Capa Futebol">
+                    <img src="https://d2hk32cswy6zx7.cloudfront.net/f37bcc0c5aa07a9cec787fce2a6fa166/v2_86c68d3a-1bfd-453d-98ab-c89954a1b673.jpg" alt="Capa Amistoso Juça" loading="lazy" decoding="async">
                     <div class="gallery-overlay">
                         <span class="gallery-category">FUTEBOL</span>
                         <h4 class="gallery-title">AMISTOSO JUÇA UNIÃO FC</h4>
@@ -1374,7 +1338,7 @@
                 </a>
                 
                 <a href="https://banlek.com/album/11cd5c" target="_blank" class="gallery-item" data-category="eventos recentes">
-                    <img src="https://d2hk32cswy6zx7.cloudfront.net/8f14f5786b2dfdb97ca6f92f964f8987/v2_02572a8c-3dd4-4ba4-921b-23b2b13551a8.jpg" alt="Capa Futebol">
+                    <img src="https://d2hk32cswy6zx7.cloudfront.net/8f14f5786b2dfdb97ca6f92f964f8987/v2_02572a8c-3dd4-4ba4-921b-23b2b13551a8.jpg" alt="Capa Festejo São João" loading="lazy" decoding="async">
                     <div class="gallery-overlay">
                         <span class="gallery-category">EVENTOS</span>
                         <h4 class="gallery-title">FESTEJO DE SÃO JOÃO BATISTA</h4>
@@ -1382,9 +1346,8 @@
                     </div>
                 </a> 
                 
-                <!-- ÁLBUM BANLEK 2 -->
                 <a href="https://banlek.com/album/11be3f" target="_blank" class="gallery-item" data-category="motocross recentes">
-                    <img src="https://d2hk32cswy6zx7.cloudfront.net/bb46b83f3de1a5dee5285bb6dd94a672/v2_b668558c-8d97-4907-b09c-8eb5b6eca9d6.jpg" alt="Capa Álbum Motocross Banlek">
+                    <img src="https://d2hk32cswy6zx7.cloudfront.net/bb46b83f3de1a5dee5285bb6dd94a672/v2_b668558c-8d97-4907-b09c-8eb5b6eca9d6.jpg" alt="Capa Trilha Pressão" loading="lazy" decoding="async">
                     <div class="gallery-overlay">
                         <span class="gallery-category">MOTOCROSS & AÇÃO</span>
                         <h4 class="gallery-title">TRILHA 015 PRESSÃO</h4>
@@ -1392,9 +1355,8 @@
                     </div>
                 </a>
                 
-                 <!-- ÁLBUM BANLEK 2 -->
                 <a href="https://banlek.com/album/11bad0" target="_blank" class="gallery-item" data-category="cavalgada recentes">
-                    <img src="https://d2hk32cswy6zx7.cloudfront.net/c1fbd67b8a0c4454a649cff4f63319c6/v2_6ba546fc-5d3a-4f81-85dc-7b04fe1081f7.jpg" alt="Capa Futebol">
+                    <img src="https://d2hk32cswy6zx7.cloudfront.net/c1fbd67b8a0c4454a649cff4f63319c6/v2_6ba546fc-5d3a-4f81-85dc-7b04fe1081f7.jpg" alt="Capa Cavalgada Festejo" loading="lazy" decoding="async">
                     <div class="gallery-overlay">
                         <span class="gallery-category">CAVALGADA</span>
                         <h4 class="gallery-title">CAVALGADA FESTEJO DE SÃO JOÃO BATISTA</h4>
@@ -1410,7 +1372,7 @@
         </div>
     </section>
 
-    <!-- SECÇÃO EXCLUSIVA - DESIGN GRÁFICO (CARROSSEL DESLIZANTE) -->
+    <!-- SECÇÃO EXCLUSIVA - DESIGN GRÁFICO -->
     <section id="design-grafico">
         <div class="section-header">
             <h2 class="section-title">DESIGN GRÁFICO</h2>
@@ -1424,45 +1386,40 @@
             </button>
 
             <div class="design-slider" id="designSlider">
-                <!-- Arte 1 -->
                 <div class="design-card" onclick="openLightbox('desg.jpeg')">
-                    <img src="desg.jpeg" alt="Arte Design 1">
+                    <img src="desg.jpeg" alt="Arte Design 1" loading="lazy" decoding="async">
                     <div class="design-overlay">
                         <div class="design-zoom-icon"><i class="fas fa-search-plus"></i></div>
                         <h4 class="design-title">Arte / Instagram</h4>
                     </div>
                 </div>
 
-                <!-- Arte 2 -->
                 <div class="design-card" onclick="openLightbox('MONAEL.jpeg')">
-                    <img src="MONAEL.jpeg" alt="Arte Design 2">
+                    <img src="MONAEL.jpeg" alt="Arte Design 2" loading="lazy" decoding="async">
                     <div class="design-overlay">
                         <div class="design-zoom-icon"><i class="fas fa-search-plus"></i></div>
                         <h4 class="design-title">Arte / Instagram</h4>
                     </div>
                 </div>
                 
-                <!-- Arte 3 -->
                 <div class="design-card" onclick="openLightbox('boby.jpeg')">
-                    <img src="boby.jpeg" alt="Arte Design 3">
+                    <img src="boby.jpeg" alt="Arte Design 3" loading="lazy" decoding="async">
                     <div class="design-overlay">
                         <div class="design-zoom-icon"><i class="fas fa-search-plus"></i></div>
                         <h4 class="design-title">Arte / Instagram</h4>
                     </div>
                 </div>            
 
-                <!-- Arte 4 -->
                 <div class="design-card" onclick="openLightbox('Eduardo.jpeg')">
-                    <img src="Eduardo.jpeg" alt="Arte Design 4">
+                    <img src="Eduardo.jpeg" alt="Arte Design 4" loading="lazy" decoding="async">
                     <div class="design-overlay">
                         <div class="design-zoom-icon"><i class="fas fa-search-plus"></i></div>
                         <h4 class="design-title">Arte / Instagram</h4>
                     </div>
                 </div>
 
-                <!-- Arte 5 -->
                 <div class="design-card" onclick="openLightbox('ronaldo.jpeg')">
-                    <img src="ronaldo.jpeg" alt="Arte Design 5">
+                    <img src="ronaldo.jpeg" alt="Arte Design 5" loading="lazy" decoding="async">
                     <div class="design-overlay">
                         <div class="design-zoom-icon"><i class="fas fa-search-plus"></i></div>
                         <h4 class="design-title">Arte / Instagram</h4>
@@ -1555,11 +1512,11 @@
         </div>
     </section>
 
-    <!-- FOOTER COM TEUS LINKS OFICIAIS (LOGO DO FINAL AUMENTADO) -->
+    <!-- FOOTER -->
     <footer>
         <div class="footer-content">
             <a href="#home">
-                <img src="Designer.png" alt="Dan XT12 Logo" class="footer-logo">
+                <img src="Designer.png" alt="Dan XT12 Logo" class="footer-logo" loading="lazy" decoding="async">
             </a>
             <p style="color: var(--text-muted); font-size: 0.9rem;">&copy; 2026 Dan XT12 — Fotógrafo e Designer. Todos os direitos reservados.</p>
             <div class="social-links">
@@ -1575,7 +1532,7 @@
         <i class="fab fa-whatsapp"></i>
     </a>
 
-    <!-- LIGHTBOX MODAL PARA AMPLIAÇÃO DE IMAGEM DO DESIGN -->
+    <!-- LIGHTBOX MODAL -->
     <div class="lightbox" id="lightbox" onclick="closeLightbox()">
         <span class="lightbox-close">&times;</span>
         <img src="" id="lightboxImg" class="lightbox-content" alt="Visualização Design">
@@ -1583,7 +1540,6 @@
 
     <!-- JAVASCRIPT -->
     <script>
-        // Menu Mobile Toggle
         const mobileToggle = document.getElementById('mobileToggle');
         const navLinks = document.getElementById('navLinks');
 
@@ -1591,7 +1547,6 @@
             navLinks.classList.toggle('active');
         });
 
-        // Função para deslizar o carrossel dos Álbuns
         function slideGallery(direction) {
             const slider = document.getElementById('gallerySlider');
             const scrollAmount = 300;
@@ -1602,7 +1557,6 @@
             }
         }
 
-        // Função para deslizar o carrossel do Design Gráfico
         function slideDesign(direction) {
             const slider = document.getElementById('designSlider');
             const scrollAmount = 300;
@@ -1613,7 +1567,6 @@
             }
         }
 
-        // Filtro da Galeria de Álbuns
         const filterBtns = document.querySelectorAll('.filter-btn');
         const galleryItems = document.querySelectorAll('.gallery-item');
 
@@ -1635,7 +1588,6 @@
             });
         });
 
-        // Lightbox para ampliação das fotos do Design Gráfico
         function openLightbox(src) {
             document.getElementById('lightboxImg').src = src;
             document.getElementById('lightbox').classList.add('active');
@@ -1645,7 +1597,6 @@
             document.getElementById('lightbox').classList.remove('active');
         }
 
-        // Envio direto do formulário para o teu WhatsApp
         function sendToWhatsapp(e) {
             e.preventDefault();
             const name = document.getElementById('name').value;
