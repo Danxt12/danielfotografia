@@ -61,7 +61,7 @@
         }
 
         /* ==========================================================================
-           2. NAVEGAÇÃO / HEADER (LOGO MAIOR)
+           2. NAVEGAÇÃO / HEADER (LOGO DO TOPO AUMENTADO)
            ========================================================================== */
         header {
             position: fixed;
@@ -83,19 +83,19 @@
             align-items: center;
         }
 
-        /* LOGO AUMENTADO PARA 150PX */
+        /* LOGO DO TOPO MAIOR (210px) */
         .logo-brand {
-            height: 150px;
+            height: 210px;
             width: auto;
             object-fit: contain;
-            filter: drop-shadow(0px 0px 12px rgba(0, 210, 255, 0.6));
+            filter: drop-shadow(0px 0px 15px rgba(0, 210, 255, 0.7));
             transition: var(--transition);
-            margin: -30px 0;
+            margin: -50px 0;
         }
 
         .logo-brand:hover {
             transform: scale(1.05);
-            filter: drop-shadow(0px 0px 18px rgba(0, 210, 255, 0.9));
+            filter: drop-shadow(0px 0px 22px rgba(0, 210, 255, 1));
         }
 
         .nav-links {
@@ -737,12 +737,12 @@
         }
 
         /* ==========================================================================
-           10. FOOTER, MODAL & FLOATING BUTTONS
+           10. FOOTER, MODAL & FLOATING BUTTONS (LOGO DO FINAL AUMENTADO)
            ========================================================================== */
         footer {
             background: #07080a;
             border-top: 1px solid var(--border-color);
-            padding: 40px 5% 30px;
+            padding: 50px 5% 30px;
             text-align: center;
         }
 
@@ -752,14 +752,21 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            gap: 20px;
+            gap: 25px;
         }
 
+        /* LOGO DO FINAL MAIOR (200px) */
         .footer-logo {
-            height: 120px;
+            height: 200px;
             width: auto;
             object-fit: contain;
-            filter: drop-shadow(0px 0px 12px rgba(0, 210, 255, 0.4));
+            filter: drop-shadow(0px 0px 18px rgba(0, 210, 255, 0.6));
+            transition: var(--transition);
+        }
+
+        .footer-logo:hover {
+            transform: scale(1.05);
+            filter: drop-shadow(0px 0px 25px rgba(0, 210, 255, 0.9));
         }
 
         .social-links {
@@ -881,8 +888,12 @@
             }
 
             .logo-brand {
-                height: 110px;
-                margin: -20px 0;
+                height: 140px;
+                margin: -30px 0;
+            }
+
+            .footer-logo {
+                height: 150px;
             }
 
             .gallery-item,
@@ -1229,423 +1240,3 @@
                         <span class="gallery-category">ENSAIOS</span>
                         <h4 class="gallery-title">Aniversário de Kayla</h4>
                         <span class="banlek-btn"><i class="fas fa-external-link-alt"></i> Acessar Álbum Banlek</span>
-                    </div>
-                </a>
-                
-                <!-- ÁLBUM BANLEK 2 -->
-                <a href="https://banlek.com/album/18aac4" target="_blank" class="gallery-item" data-category="futebol recentes">
-                    <img src="https://d2hk32cswy6zx7.cloudfront.net/99326995748d070ceb99e9bd6da1c793/v2_6b706e72-a3a9-440a-bb2b-a47e7d557c67.jpg" alt="Capa Futebol">
-                    <div class="gallery-overlay">
-                        <span class="gallery-category">FUTEBOL</span>
-                        <h4 class="gallery-title">CAMPERTINO X COAHAB</h4>
-                        <span class="banlek-btn"><i class="fas fa-external-link-alt"></i> Acessar Álbum Banlek</span>
-                    </div>
-                </a>                
-
-                <!-- ÁLBUM BANLEK 4 -->
-                <a href="https://banlek.com/album/189267" target="_blank" class="gallery-item" data-category="vaquejada recentes">
-                    <img src="https://d2hk32cswy6zx7.cloudfront.net/b0146b3801050306c11d0985672520e3/v2_0af4e105-1b6c-4755-9894-a58d447cb040.jpg" alt="Capa Vaquejada">
-                    <div class="gallery-overlay">
-                        <span class="gallery-category">VAQUEJADA</span>
-                        <h4 class="gallery-title">VAQUEJADA.POV MUCAMBO</h4>
-                        <span class="banlek-btn"><i class="fas fa-external-link-alt"></i> Acessar Álbum Banlek</span>
-                    </div>
-                </a>
-
-                <!-- ÁLBUM BANLEK 2 -->
-                <a href="https://banlek.com/album/16c939" target="_blank" class="gallery-item" data-category="futebol recentes">
-                    <img src="https://d2hk32cswy6zx7.cloudfront.net/ee1a9d110b45b7210913517de2a4a130/v2_2fc41d16-e443-4847-8fca-0bd9a6f50f89.jpg" alt="Capa Futebol">
-                    <div class="gallery-overlay">
-                        <span class="gallery-category">FUTEBOL</span>
-                        <h4 class="gallery-title">CAMPEONATO</h4>
-                        <span class="banlek-btn"><i class="fas fa-external-link-alt"></i> Acessar Álbum Banlek</span>
-                    </div>
-                </a>
-                
-                <!-- ÁLBUM BANLEK 4 -->
-                <a href="https://banlek.com/album/169134" target="_blank" class="gallery-item" data-category="vaquejada recentes">
-                    <img src="https://d2hk32cswy6zx7.cloudfront.net/e17997ab8a4a0edc220d80b42d6d2b97/v2_6f56c579-2565-48cf-b710-334060e6e6f7.jpg" alt="Capa Vaquejada">
-                    <div class="gallery-overlay">
-                        <span class="gallery-category">VAQUEJADA</span>
-                        <h4 class="gallery-title">Vaquejada Fazenda Calumbí</h4>
-                        <span class="banlek-btn"><i class="fas fa-external-link-alt"></i> Acessar Álbum Banlek</span>
-                    </div>
-                </a>
-                
-                <!-- ÁLBUM BANLEK 2 -->
-                <a href="https://banlek.com/album/15ec28" target="_blank" class="gallery-item" data-category="futebol recentes">
-                    <img src="https://d2hk32cswy6zx7.cloudfront.net/937dde87af1ffdc34d12e8c9da084e4f/v2_7bfc209a-3a9b-4e74-8b6a-050dc63732f1.jpg" alt="Capa Futebol">
-                    <div class="gallery-overlay">
-                        <span class="gallery-category">FUTEBOL</span>
-                        <h4 class="gallery-title">GALÁTICOS FC X JUÇARA FC</h4>
-                        <span class="banlek-btn"><i class="fas fa-external-link-alt"></i> Acessar Álbum Banlek</span>
-                    </div>
-                </a>
-                
-                <!-- ÁLBUM BANLEK 2 -->
-                <a href="https://banlek.com/album/157a13" target="_blank" class="gallery-item" data-category="futebol recentes">
-                    <img src="https://d2hk32cswy6zx7.cloudfront.net/2d78c53c7274335a7fe312ff7a4811db/v2_d44314aa-49a5-4e3d-ad2a-3b1c52387f94.jpg" alt="Capa Futebol">
-                    <div class="gallery-overlay">
-                        <span class="gallery-category">FUTEBOL</span>
-                        <h4 class="gallery-title">CAMPEONATO POV.COMPERTINO</h4>
-                        <span class="banlek-btn"><i class="fas fa-external-link-alt"></i> Acessar Álbum Banlek</span>
-                    </div>
-                </a>
-                
-                <!-- ÁLBUM BANLEK 4 -->
-                <a href="https://banlek.com/album/13f468" target="_blank" class="gallery-item" data-category="vaquejada recentes">
-                    <img src="https://d2hk32cswy6zx7.cloudfront.net/e5b6aef9d503ed645a0906609145cc41/v2_2078c1d4-324a-4753-a546-2e3fecead278.jpg" alt="Capa Vaquejada">
-                    <div class="gallery-overlay">
-                        <span class="gallery-category">VAQUEJADA</span>
-                        <h4 class="gallery-title">Vaquejada Pov.Mucambo</h4>
-                        <span class="banlek-btn"><i class="fas fa-external-link-alt"></i> Acessar Álbum Banlek</span>
-                    </div>
-                </a> 
-                
-                <!-- ÁLBUM BANLEK 2 -->
-                <a href="https://banlek.com/album/128e24" target="_blank" class="gallery-item" data-category="futebol recentes">
-                    <img src="https://d2hk32cswy6zx7.cloudfront.net/1743ef96425e0f5ebc6aba7b1aa3df1e/v2_af347ae5-2309-4eae-b7c9-6ecb2c8436c9.jpg" alt="Capa Futebol">
-                    <div class="gallery-overlay">
-                        <span class="gallery-category">FUTEBOL</span>
-                        <h4 class="gallery-title">Naza base x Juça união fc</h4>
-                        <span class="banlek-btn"><i class="fas fa-external-link-alt"></i> Acessar Álbum Banlek</span>
-                    </div>
-                </a>
-                
-                <!-- ÁLBUM BANLEK 2 -->
-                <a href="https://banlek.com/album/128278" target="_blank" class="gallery-item" data-category="futebol recentes">
-                    <img src="https://d2hk32cswy6zx7.cloudfront.net/d0380f251fcdb4b60f42c32c344d39ed/v2_22a68b75-0076-4e89-ba11-5f9fbdd3ebe1.jpg" alt="Capa Futebol">
-                    <div class="gallery-overlay">
-                        <span class="gallery-category">FUTEBOL</span>
-                        <h4 class="gallery-title">JUÇARA X ALDEIA</h4>
-                        <span class="banlek-btn"><i class="fas fa-external-link-alt"></i> Acessar Álbum Banlek</span>
-                    </div>
-                </a>
-                
-                <!-- ÁLBUM BANLEK 4 -->
-                <a href="https://banlek.com/album/124c38" target="_blank" class="gallery-item" data-category="vaquejada recentes">
-                    <img src="https://d2hk32cswy6zx7.cloudfront.net/a5f60922c71629b10cebe5dd456dc324/v2_c1f22690-9766-4a53-a300-997d8324d862.jpg" alt="Capa Vaquejada">
-                    <div class="gallery-overlay">
-                        <span class="gallery-category">VAQUEJADA</span>
-                        <h4 class="gallery-title">Vaquejada POV.BOA VISTA </h4>
-                        <span class="banlek-btn"><i class="fas fa-external-link-alt"></i> Acessar Álbum Banlek</span>
-                    </div>
-                </a>
-                
-                <!-- ÁLBUM BANLEK 2 -->
-                <a href="https://banlek.com/album/122f69" target="_blank" class="gallery-item" data-category="futebol recentes">
-                    <img src="https://d2hk32cswy6zx7.cloudfront.net/c393c69fe31b78b6edf752317e54e2b1/v2_d91d05fb-4609-4a25-86e3-8e512230eada.jpg" alt="Capa Futebol">
-                    <div class="gallery-overlay">
-                        <span class="gallery-category">FUTEBOL</span>
-                        <h4 class="gallery-title">JUÇA UNIÃO FC X NZ BASE</h4>
-                        <span class="banlek-btn"><i class="fas fa-external-link-alt"></i> Acessar Álbum Banlek</span>
-                    </div>
-                </a>
-                
-                <!-- ÁLBUM BANLEK 4 -->
-                <a href="https://banlek.com/album/1208e6" target="_blank" class="gallery-item" data-category="vaquejada recentes">
-                    <img src="https://d2hk32cswy6zx7.cloudfront.net/5ec3e13d0d07289639e73d81c21fa7bd/v2_b23ba268-b053-41b2-819f-ed4bd1142a66.jpg" alt="Capa Vaquejada">
-                    <div class="gallery-overlay">
-                        <span class="gallery-category">VAQUEJADA</span>
-                        <h4 class="gallery-title">Vaquejada POV.Fazenda Santa Luzia</h4>
-                        <span class="banlek-btn"><i class="fas fa-external-link-alt"></i> Acessar Álbum Banlek</span>
-                    </div>
-                </a> 
-                
-                <!-- ÁLBUM BANLEK 2 -->
-                <a href="https://banlek.com/album/11eacb" target="_blank" class="gallery-item" data-category="futebol recentes">
-                    <img src="https://d2hk32cswy6zx7.cloudfront.net/f37bcc0c5aa07a9cec787fce2a6fa166/v2_86c68d3a-1bfd-453d-98ab-c89954a1b673.jpg" alt="Capa Futebol">
-                    <div class="gallery-overlay">
-                        <span class="gallery-category">FUTEBOL</span>
-                        <h4 class="gallery-title">AMISTOSO JUÇA UNIÃO FC</h4>
-                        <span class="banlek-btn"><i class="fas fa-external-link-alt"></i> Acessar Álbum Banlek</span>
-                    </div>
-                </a>
-                
-                <a href="https://banlek.com/album/11cd5c" target="_blank" class="gallery-item" data-category="eventos recentes">
-                    <img src="https://d2hk32cswy6zx7.cloudfront.net/8f14f5786b2dfdb97ca6f92f964f8987/v2_02572a8c-3dd4-4ba4-921b-23b2b13551a8.jpg" alt="Capa Futebol">
-                    <div class="gallery-overlay">
-                        <span class="gallery-category">EVENTOS</span>
-                        <h4 class="gallery-title">FESTEJO DE SÃO JOÃO BATISTA</h4>
-                        <span class="banlek-btn"><i class="fas fa-external-link-alt"></i> Acessar Álbum Banlek</span>
-                    </div>
-                </a> 
-                
-                <!-- ÁLBUM BANLEK 2 -->
-                <a href="https://banlek.com/album/11be3f" target="_blank" class="gallery-item" data-category="motocross recentes">
-                    <img src="https://d2hk32cswy6zx7.cloudfront.net/bb46b83f3de1a5dee5285bb6dd94a672/v2_b668558c-8d97-4907-b09c-8eb5b6eca9d6.jpg" alt="Capa Álbum Motocross Banlek">
-                    <div class="gallery-overlay">
-                        <span class="gallery-category">MOTOCROSS & AÇÃO</span>
-                        <h4 class="gallery-title">TRILHA 015 PRESSÃO</h4>
-                        <span class="banlek-btn"><i class="fas fa-external-link-alt"></i> Acessar Álbum Banlek</span>
-                    </div>
-                </a>
-                
-                 <!-- ÁLBUM BANLEK 2 -->
-                <a href="https://banlek.com/album/11bad0" target="_blank" class="gallery-item" data-category="cavalgada recentes">
-                    <img src="https://d2hk32cswy6zx7.cloudfront.net/c1fbd67b8a0c4454a649cff4f63319c6/v2_6ba546fc-5d3a-4f81-85dc-7b04fe1081f7.jpg" alt="Capa Futebol">
-                    <div class="gallery-overlay">
-                        <span class="gallery-category">CAVALGADA</span>
-                        <h4 class="gallery-title">CAVALGADA FESTEJO DE SÃO JOÃO BATISTA</h4>
-                        <span class="banlek-btn"><i class="fas fa-external-link-alt"></i> Acessar Álbum Banlek</span>
-                    </div>
-                </a>                
-
-            </div>
-
-            <button class="slide-btn next" onclick="slideGallery('right')">
-                <i class="fas fa-chevron-right"></i>
-            </button>
-        </div>
-    </section>
-
-    <!-- SECÇÃO EXCLUSIVA - DESIGN GRÁFICO (AGORA EM CARROSSEL DESLIZANTE) -->
-    <section id="design-grafico">
-        <div class="section-header">
-            <h2 class="section-title">DESIGN GRÁFICO</h2>
-            <span class="section-subtitle-albums">ARTES & CARTAZES</span>
-            <div class="section-line"></div>
-        </div>
-
-        <div class="slider-wrapper">
-            <button class="slide-btn prev" onclick="slideDesign('left')">
-                <i class="fas fa-chevron-left"></i>
-            </button>
-
-            <div class="design-slider" id="designSlider">
-                <!-- Arte 1 -->
-                <div class="design-card" onclick="openLightbox('desg.jpeg')">
-                    <img src="desg.jpeg" alt="Arte Design 1">
-                    <div class="design-overlay">
-                        <div class="design-zoom-icon"><i class="fas fa-search-plus"></i></div>
-                        <h4 class="design-title">Arte / Instagram</h4>
-                    </div>
-                </div>
-
-                <!-- Arte 2 -->
-                <div class="design-card" onclick="openLightbox('MONAEL.jpeg')">
-                    <img src="MONAEL.jpeg" alt="Arte Design 2">
-                    <div class="design-overlay">
-                        <div class="design-zoom-icon"><i class="fas fa-search-plus"></i></div>
-                        <h4 class="design-title">Arte / Instagram</h4>
-                    </div>
-                </div>
-                
-                <!-- Arte 3 -->
-                <div class="design-card" onclick="openLightbox('boby.jpeg')">
-                    <img src="boby.jpeg" alt="Arte Design 3">
-                    <div class="design-overlay">
-                        <div class="design-zoom-icon"><i class="fas fa-search-plus"></i></div>
-                        <h4 class="design-title">Arte / Instagram</h4>
-                    </div>
-                </div>            
-
-                <!-- Arte 4 -->
-                <div class="design-card" onclick="openLightbox('Eduardo.jpeg')">
-                    <img src="Eduardo.jpeg" alt="Arte Design 4">
-                    <div class="design-overlay">
-                        <div class="design-zoom-icon"><i class="fas fa-search-plus"></i></div>
-                        <h4 class="design-title">Arte / Instagram</h4>
-                    </div>
-                </div>
-
-                <!-- Arte 5 -->
-                <div class="design-card" onclick="openLightbox('ronaldo.jpeg')">
-                    <img src="ronaldo.jpeg" alt="Arte Design 5">
-                    <div class="design-overlay">
-                        <div class="design-zoom-icon"><i class="fas fa-search-plus"></i></div>
-                        <h4 class="design-title">Arte / Instagram</h4>
-                    </div>
-                </div>
-            </div>
-
-            <button class="slide-btn next" onclick="slideDesign('right')">
-                <i class="fas fa-chevron-right"></i>
-            </button>
-        </div>
-    </section>
-
-    <!-- SERVIÇOS -->
-    <section id="servicos" style="background: rgba(20, 23, 29, 0.4);">
-        <div class="section-header">
-            <span class="section-subtitle-albums" style="font-size: 0.85rem; margin-bottom: 5px;">O QUE FAÇO</span>
-            <h2 class="section-title">SERVIÇOS & ESPECIALIDADES</h2>
-            <div class="section-line"></div>
-        </div>
-
-        <div class="services-grid">
-            <div class="service-card">
-                <div class="service-icon"><i class="fas fa-motorcycle"></i></div>
-                <h3>Fotografia Esportiva</h3>
-                <p>Cobertura completa de motocross, corridas e desportos radicais com captura de alta velocidade.</p>
-                <a href="#contacto" class="service-link">Pedir Orçamento <i class="fas fa-arrow-right"></i></a>
-            </div>
-
-            <div class="service-card">
-                <div class="service-icon"><i class="fas fa-user-ninja"></i></div>
-                <h3>Ensaios Pessoais</h3>
-                <p>Ensaios fotográficos de retrato, estilo urbano e editorial com edição profissional de cor.</p>
-                <a href="#contacto" class="service-link">Pedir Orçamento <i class="fas fa-arrow-right"></i></a>
-            </div>
-
-            <div class="service-card">
-                <div class="service-icon"><i class="fas fa-paint-brush"></i></div>
-                <h3>Design Gráfico</h3>
-                <p>Criação de cartazes, flyers para eventos, banners para redes sociais e identidade visual.</p>
-                <a href="#contacto" class="service-link">Pedir Orçamento <i class="fas fa-arrow-right"></i></a>
-            </div>
-        </div>
-    </section>
-
-    <!-- CONTACTO -->
-    <section id="contacto">
-        <div class="contact-container">
-            <div class="contact-info">
-                <h3>VAMOS TRABALHAR JUNTOS?</h3>
-                <p>Tens um evento, corrida ou projeto de design em mente? Entra em contacto direto para agendar ou pedir um orçamento.</p>
-
-                <div class="info-item">
-                    <div class="info-icon"><i class="fab fa-whatsapp"></i></div>
-                    <div>
-                        <small style="color: var(--text-muted);">WhatsApp Directo</small>
-                        <p style="font-weight: 600; margin: 0;">(98) 97024-5363</p>
-                    </div>
-                </div>
-
-                <div class="info-item">
-                    <div class="info-icon"><i class="fab fa-instagram"></i></div>
-                    <div>
-                        <small style="color: var(--text-muted);">Instagram</small>
-                        <p style="font-weight: 600; margin: 0;">@dan__xt12</p>
-                    </div>
-                </div>
-            </div>
-
-            <form onsubmit="sendToWhatsapp(event)">
-                <div class="form-group">
-                    <input type="text" id="name" class="form-control" placeholder="O teu Nome" required>
-                </div>
-                <div class="form-group">
-                    <select id="service" class="form-control" required>
-                        <option value="" disabled selected>Seleciona o Serviço</option>
-                        <option value="Fotografia Desportiva">Fotografia Desportiva / Motocross</option>
-                        <option value="Ensaio Fotográfico">Ensaio Fotográfico</option>
-                        <option value="Design Gráfico">Design Gráfico / Flyer</option>
-                        <option value="Outro">Outro Assunto</option>
-                    </select>
-                </div>
-                <div class="form-group">
-                    <textarea id="message" class="form-control" placeholder="Detalhes da mensagem ou evento..." required></textarea>
-                </div>
-                <button type="submit" class="btn-primary" style="width: 100%; justify-content: center; border: none; cursor: pointer;">
-                    <i class="fab fa-whatsapp"></i> ENVIAR MENSAGEM
-                </button>
-            </form>
-        </div>
-    </section>
-
-    <!-- FOOTER COM TEUS LINKS OFICIAIS -->
-    <footer>
-        <div class="footer-content">
-            <a href="#home">
-                <img src="Designer.png" alt="Dan XT12 Logo" class="footer-logo">
-            </a>
-            <p style="color: var(--text-muted); font-size: 0.9rem;">&copy; 2026 Dan XT12 — Fotógrafo e Designer. Todos os direitos reservados.</p>
-            <div class="social-links">
-                <a href="https://instagram.com/dan__xt12?exln=Y3UxMmtneTJyNXEw" target="_blank" class="social-btn"><i class="fab fa-instagram"></i></a>
-                <a href="https://www.facebook.com/share/19Zm9RgYH4/" target="_blank" class="social-btn"><i class="fab fa-facebook-f"></i></a>
-                <a href="https://wa.me/5598970245363" target="_blank" class="social-btn"><i class="fab fa-whatsapp"></i></a>
-            </div>
-        </div>
-    </footer>
-
-    <!-- BOTÃO FLUTUANTE WHATSAPP -->
-    <a href="https://wa.me/5598970245363?text=Olá%20Dan,%20gostaria%20de%20saber%20mais%20sobre%20os%20teus%20serviços!" class="floating-whatsapp" target="_blank">
-        <i class="fab fa-whatsapp"></i>
-    </a>
-
-    <!-- LIGHTBOX MODAL PARA DESIGN GRÁFICO -->
-    <div class="lightbox" id="lightbox" onclick="closeLightbox()">
-        <span class="lightbox-close">&times;</span>
-        <img src="" id="lightboxImg" class="lightbox-content" alt="Visualização Design">
-    </div>
-
-    <!-- JAVASCRIPT -->
-    <script>
-        // Menu Mobile Toggle
-        const mobileToggle = document.getElementById('mobileToggle');
-        const navLinks = document.getElementById('navLinks');
-
-        mobileToggle.addEventListener('click', () => {
-            navLinks.classList.toggle('active');
-        });
-
-        // Função para deslizar o carrossel dos Álbuns
-        function slideGallery(direction) {
-            const slider = document.getElementById('gallerySlider');
-            const scrollAmount = 300;
-            if (direction === 'left') {
-                slider.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
-            } else {
-                slider.scrollBy({ left: scrollAmount, behavior: 'smooth' });
-            }
-        }
-
-        // Função para deslizar o carrossel do Design Gráfico
-        function slideDesign(direction) {
-            const slider = document.getElementById('designSlider');
-            const scrollAmount = 300;
-            if (direction === 'left') {
-                slider.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
-            } else {
-                slider.scrollBy({ left: scrollAmount, behavior: 'smooth' });
-            }
-        }
-
-        // Filtro da Galeria de Álbuns
-        const filterBtns = document.querySelectorAll('.filter-btn');
-        const galleryItems = document.querySelectorAll('.gallery-item');
-
-        filterBtns.forEach(btn => {
-            btn.addEventListener('click', () => {
-                filterBtns.forEach(b => b.classList.remove('active'));
-                btn.classList.add('active');
-
-                const filter = btn.getAttribute('data-filter');
-
-                galleryItems.forEach(item => {
-                    const categories = item.getAttribute('data-category').split(' ');
-                    if (filter === 'all' || categories.includes(filter)) {
-                        item.style.display = 'block';
-                    } else {
-                        item.style.display = 'none';
-                    }
-                });
-            });
-        });
-
-        // Lightbox para ampliação das fotos do Design Gráfico
-        function openLightbox(src) {
-            document.getElementById('lightboxImg').src = src;
-            document.getElementById('lightbox').classList.add('active');
-        }
-
-        function closeLightbox() {
-            document.getElementById('lightbox').classList.remove('active');
-        }
-
-        // Envio direto do formulário para o teu WhatsApp
-        function sendToWhatsapp(e) {
-            e.preventDefault();
-            const name = document.getElementById('name').value;
-            const service = document.getElementById('service').value;
-            const message = document.getElementById('message').value;
-
-            const text = `Olá Dan! Meu nome é ${name}. Gostaria de informações sobre ${service}. Mensagem: ${message}`;
-            const encodedText = encodeURIComponent(text);
-            
-            window.open(`https://wa.me/5598970245363?text=${encodedText}`, '_blank');
-        }
-    </script>
-</body>
-</html>
