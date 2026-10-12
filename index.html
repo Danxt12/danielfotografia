@@ -1552,7 +1552,7 @@
         <img src="" id="lightboxImg" class="lightbox-content" alt="Visualização Design">
     </div>
 
-<!-- JAVASCRIPT CORRIGIDO COM AGENDAMENTO DE SCROLL -->
+<!-- JAVASCRIPT CORRIGIDO (SEM CONFLITO DE SNAP E SCROLL) -->
     <script>
         const mobileToggle = document.getElementById('mobileToggle');
         const navLinks = document.getElementById('navLinks');
@@ -1592,6 +1592,7 @@
 
                 const filter = btn.getAttribute('data-filter');
 
+                // 1. Esconde/Mostra os itens correspondentes
                 galleryItems.forEach(item => {
                     const categories = item.getAttribute('data-category').split(' ');
                     if (filter === 'all' || categories.includes(filter)) {
@@ -1601,10 +1602,10 @@
                     }
                 });
 
-                // Espera 10ms até o navegador recalcular a exibição e força a volta para o início
-                setTimeout(() => {
-                    gallerySlider.scrollTo({ left: 0, behavior: 'smooth' });
-                }, 10);
+                // 2. Aguarda que o navegador processe a nova renderização e reposiciona instantaneamente
+                requestAnimationFrame(() => {
+                    gallerySlider.scrollTo({ left: 0, behavior: 'instant' });
+                });
             });
         });
 
