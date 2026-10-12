@@ -1552,7 +1552,7 @@
         <img src="" id="lightboxImg" class="lightbox-content" alt="Visualização Design">
     </div>
 
-    <!-- JAVASCRIPT -->
+  <!-- JAVASCRIPT CORRIGIDO -->
     <script>
         const mobileToggle = document.getElementById('mobileToggle');
         const navLinks = document.getElementById('navLinks');
@@ -1583,6 +1583,7 @@
 
         const filterBtns = document.querySelectorAll('.filter-btn');
         const galleryItems = document.querySelectorAll('.gallery-item');
+        const gallerySlider = document.getElementById('gallerySlider');
 
         filterBtns.forEach(btn => {
             btn.addEventListener('click', () => {
@@ -1599,6 +1600,9 @@
                         item.style.display = 'none';
                     }
                 });
+
+                // Reseta a posição do carrossel para o início ao alternar categorias
+                gallerySlider.scrollLeft = 0;
             });
         });
 
