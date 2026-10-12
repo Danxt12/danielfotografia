@@ -1552,7 +1552,7 @@
         <img src="" id="lightboxImg" class="lightbox-content" alt="Visualização Design">
     </div>
 
-  <!-- JAVASCRIPT CORRIGIDO -->
+<!-- JAVASCRIPT CORRIGIDO COM AGENDAMENTO DE SCROLL -->
     <script>
         const mobileToggle = document.getElementById('mobileToggle');
         const navLinks = document.getElementById('navLinks');
@@ -1601,8 +1601,10 @@
                     }
                 });
 
-                // Reseta a posição do carrossel para o início ao alternar categorias
-                gallerySlider.scrollLeft = 0;
+                // Espera 10ms até o navegador recalcular a exibição e força a volta para o início
+                setTimeout(() => {
+                    gallerySlider.scrollTo({ left: 0, behavior: 'smooth' });
+                }, 10);
             });
         });
 
