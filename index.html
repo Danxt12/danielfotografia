@@ -10,9 +10,9 @@
     <link rel="apple-touch-icon" href="Designer.png">
 
     <!-- Preload das Imagens Principais -->
-    <link rel="preload" as="image" href="danxt.jpg" fetchpriority="high">
-    <link rel="preload" as="image" href="xt12.jpeg" fetchpriority="high">
-    <link rel="preload" as="image" href="dn.jpeg" fetchpriority="high">
+    <link rel="preload" as="image" href="danxt.jpeg" fetchpriority="high">
+    <link rel="preload" as="image" href="xt12.jpg" fetchpriority="high">
+    <link rel="preload" as="image" href="dn.jpg" fetchpriority="high">
 
     <!-- Conexões Antecipadas para CDN e Banlek -->
     <link rel="preconnect" href="https://wsrv.nl" crossorigin>
@@ -186,7 +186,7 @@
         }
 
         /* ==========================================================================
-           3. HERO SECTION (FUNDOM COMPUTADOR: xt12.jpg)
+           3. HERO SECTION (IMAGEM RESPONSIVA DIRETA)
            ========================================================================== */
         .hero {
             position: relative;
@@ -195,14 +195,30 @@
             align-items: center;
             justify-content: center;
             padding: 140px 5% 60px;
-            background: linear-gradient(180deg, rgba(6, 8, 12, 0.4) 0%, var(--bg-dark) 100%),
-                        url('xt12.jpg') center/cover no-repeat;
+            overflow: hidden;
+        }
+
+        .hero-bg {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+        }
+
+        .hero-bg picture,
+        .hero-bg img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
         }
 
         .hero-overlay {
             position: absolute;
             inset: 0;
-            background: radial-gradient(circle at center, rgba(0,210,255,0.06) 0%, rgba(6,8,12,0.85) 80%);
+            background: linear-gradient(180deg, rgba(6, 8, 12, 0.45) 0%, rgba(6, 8, 12, 0.7) 60%, var(--bg-dark) 100%),
+                        radial-gradient(circle at center, rgba(0,210,255,0.06) 0%, rgba(6,8,12,0.85) 80%);
             z-index: 1;
         }
 
@@ -332,7 +348,7 @@
         }
 
         /* ==========================================================================
-           5. SOBRE MIM (CONHECER O FOTÓGRAFO - USANDO: danxt.jpeg)
+           5. SOBRE MIM (CONHECER O FOTÓGRAFO)
            ========================================================================== */
         section {
             padding: 80px 5%;
@@ -990,15 +1006,7 @@
             }
         }
 
-        /* MEDIA QUERY TELEMÓVEL (MOBILE - FUNDO: dn.jpg) */
         @media (max-width: 768px) {
-            .hero {
-                min-height: 100vh;
-                padding: 130px 5% 60px;
-                background: linear-gradient(180deg, rgba(6, 8, 12, 0.45) 0%, rgba(6, 8, 12, 0.75) 70%, var(--bg-dark) 100%),
-                            url('dn.jpg') center/cover no-repeat;
-            }
-
             .nav-links {
                 position: fixed;
                 top: 70px;
@@ -1065,8 +1073,14 @@
         </div>
     </header>
 
-    <!-- HERO SECTION -->
+    <!-- HERO SECTION COM TAG PICTURE (SISTEMA DE FUNDO DIRETO) -->
     <section id="home" class="hero">
+        <div class="hero-bg">
+            <picture>
+                <source media="(max-width: 768px)" srcset="dn.jpg">
+                <img src="xt12.jpg" alt="Daniel Dan XT12 Fotógrafo e Designer">
+            </picture>
+        </div>
         <div class="hero-overlay"></div>
         <div class="hero-content">
             <div class="hero-badge">
@@ -1119,7 +1133,7 @@
         <div class="about-grid">
             <div class="about-img-wrapper">
                 <div class="about-img-box">
-                    <img src="danxt.jpg" alt="Daniel Dan XT12 Fotógrafo" fetchpriority="high" decoding="async">
+                    <img src="danxt.jpeg" alt="Daniel Dan XT12 Fotógrafo" fetchpriority="high" decoding="async">
                 </div>
             </div>
 
