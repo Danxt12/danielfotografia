@@ -23,7 +23,7 @@
 
     <style>
         /* ==========================================================================
-           1. VARIÁVEIS E RESET GLOBAL COM FADE AZUL ESCURO
+           1. VARIÁVEIS E RESET GLOBAL (FUNDO FADE AZUL ESCURO)
            ========================================================================== */
         :root {
             --bg-dark: #06080c;
@@ -103,7 +103,7 @@
             align-items: center;
         }
 
-        /* MANUTENÇÃO INTACADA DA LOGO */
+        /* LOGO SEM ALTERAÇÃO DE TAMANHO */
         .logo-brand {
             height: 130px;
             width: auto;
@@ -118,7 +118,7 @@
             filter: drop-shadow(0px 0px 22px rgba(0, 210, 255, 1));
         }
 
-        /* MENU SUPERIOR NO ESTILO CÁPSULA (REFERÊNCIA) */
+        /* MENU EM CÁPSULAS DA REFERÊNCIA */
         .nav-links {
             display: flex;
             gap: 8px;
@@ -145,7 +145,7 @@
             border: 1px solid rgba(0, 210, 255, 0.3);
         }
 
-        /* MANUTENÇÃO INTACADA DO BOTÃO ORÇAMENTO */
+        /* BOTÃO ORÇAMENTO INTACADO */
         .btn-header {
             background: linear-gradient(135deg, var(--accent-cyan), var(--accent-blue));
             color: #fff;
@@ -310,12 +310,12 @@
         }
 
         /* ==========================================================================
-           5. SOBRE MIM - ESPAÇAMENTOS E FONTES IDÊNTICOS À FOTO
+           5. SOBRE MIM - FOTO COM MOLDURA ORIGINAL & DAN XT12 TUDO EM AZUL
            ========================================================================== */
         .about-grid {
             display: grid;
             grid-template-columns: 1fr 1.2fr;
-            gap: 60px;
+            gap: 50px;
             align-items: center;
             max-width: 1200px;
             margin: 0 auto;
@@ -323,17 +323,24 @@
 
         .about-img-wrapper {
             position: relative;
-            padding: 10px;
+            padding-right: 15px;
+            padding-bottom: 15px;
             width: 100%;
         }
 
         .about-img-wrapper::after {
             content: '';
             position: absolute;
-            inset: 0;
-            border: 1px solid rgba(0, 210, 255, 0.35);
-            border-radius: 24px;
+            top: 15px;
+            left: 15px;
+            right: 0;
+            bottom: 0;
+            border: 2px solid var(--accent-cyan);
+            border-radius: 22px;
+            z-index: 0;
             pointer-events: none;
+            opacity: 0.7;
+            box-shadow: 0 0 20px rgba(0, 210, 255, 0.25);
         }
 
         .about-img-box {
@@ -341,7 +348,8 @@
             z-index: 1;
             border-radius: 20px;
             overflow: hidden;
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.7);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
+            border: 1px solid var(--border-color);
             animation: pulseSkeleton 1.8s infinite ease-in-out;
         }
 
@@ -356,110 +364,28 @@
             transform: scale(1.03);
         }
 
-        /* SUBTÍTULO COM BARRA AZUL DA FOTO */
-        .section-tag {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            color: var(--text-muted);
-            font-size: 0.8rem;
-            font-weight: 700;
-            letter-spacing: 2px;
-            text-transform: uppercase;
-            margin-bottom: 12px;
-        }
-
-        .section-tag::before {
-            content: '';
-            width: 24px;
-            height: 3px;
-            background: var(--accent-cyan);
-            border-radius: 2px;
-        }
-
-        /* TÍTULO COM DAN XT12 TOTALMENTE EM AZUL */
-        .about-text h2 {
-            font-size: clamp(2.2rem, 3.8vw, 3rem);
-            font-weight: 900;
+        .about-text h3 {
+            font-size: 1.8rem;
+            margin-bottom: 20px;
             color: #ffffff;
-            margin-bottom: 24px;
-            letter-spacing: 1px;
-            line-height: 1.15;
         }
 
-        .text-cyan {
+        .about-text .text-cyan {
             color: var(--accent-cyan);
         }
 
         .about-text p {
             color: var(--text-muted);
             margin-bottom: 20px;
-            font-size: 0.98rem;
-            line-height: 1.75;
-        }
-
-        /* TAGS EM CÁPSULA TIPO A IMAGEM */
-        .category-tags {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
-            margin: 28px 0;
-        }
-
-        .tag-pill {
-            background: rgba(255, 255, 255, 0.04);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            border-radius: 20px;
-            padding: 6px 16px;
-            font-size: 0.75rem;
-            font-weight: 700;
-            color: var(--text-muted);
-            letter-spacing: 1px;
-            text-transform: uppercase;
+            font-size: 1.05rem;
         }
 
         .about-actions {
             display: flex;
             gap: 15px;
             flex-wrap: wrap;
-            margin-top: 10px;
-        }
-
-        .btn-action-primary {
-            background: linear-gradient(135deg, var(--accent-cyan), var(--accent-blue));
-            color: #fff;
-            padding: 12px 28px;
-            border-radius: 30px;
-            font-weight: 700;
-            font-size: 0.88rem;
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            box-shadow: 0 4px 18px rgba(0, 210, 255, 0.35);
-        }
-
-        .btn-action-primary:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 6px 22px rgba(0, 210, 255, 0.5);
-        }
-
-        .btn-action-secondary {
-            background: rgba(255, 255, 255, 0.04);
-            border: 1px solid rgba(255, 255, 255, 0.15);
-            color: #fff;
-            padding: 12px 28px;
-            border-radius: 30px;
-            font-weight: 600;
-            font-size: 0.88rem;
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-        }
-
-        .btn-action-secondary:hover {
-            background: rgba(255, 255, 255, 0.08);
-            border-color: rgba(255, 255, 255, 0.3);
-            transform: translateY(-2px);
+            margin-top: 25px;
+            margin-bottom: 25px;
         }
 
         .stats-grid {
@@ -1034,7 +960,7 @@
 </head>
 <body>
 
-    <!-- NAVEGAÇÃO / HEADER COM MENU EM CÁPSULAS -->
+    <!-- NAVEGAÇÃO / HEADER -->
     <header>
         <a href="#home" class="logo-container">
             <img src="Designer.png" alt="Dan XT12 Logo Oficial" class="logo-brand" fetchpriority="high" decoding="async" width="130" height="130">
@@ -1075,7 +1001,7 @@
         </div>
     </section>
 
-    <!-- SOBRE MIM (ESTILO E POSICIONAMENTO DA FOTO REVISADA) -->
+    <!-- SOBRE MIM -->
     <section id="sobre">
         <div class="about-grid">
             <div class="about-img-wrapper">
@@ -1084,24 +1010,14 @@
                 </div>
             </div>
             <div class="about-text">
-                <div class="section-tag">CONHECE O FOTÓGRAFO</div>
-                <h2>DANIEL — <span class="text-cyan">DAN XT12</span></h2>
-                
-                <p>Sou fotógrafo e designer gráfico apaixonado por adrenalina, movimento e expressões autênticas. Especializei-me na cobertura de eventos esportivos de alta velocidade, capturando momentos épicos com precisão milimétrica.</p>
-                
-                <p>Unindo a fotografia de alta performance ao design gráfico, entrego um trabalho completo: desde o disparo no terreno até a arte final para redes sociais e imprensa. Baseado em São João dos Patos/MA, atendo eventos em toda a região.</p>
-
-                <div class="category-tags">
-                    <span class="tag-pill">ESPORTIVA</span>
-                    <span class="tag-pill">MOTOCROSS</span>
-                    <span class="tag-pill">VAQUEJADA</span>
-                    <span class="tag-pill">ENSAIOS</span>
-                    <span class="tag-pill">DESIGN</span>
-                </div>
+                <span class="section-subtitle-albums" style="font-size: 0.85rem; margin-bottom: 10px;">CONHECE O FOTÓGRAFO</span>
+                <h3>DANIEL — <span class="text-cyan">DAN XT12</span></h3>
+                <p>Sou fotógrafo e designer gráfico apaixonado pela adrenalina, movimento e expressões autênticas. Especializei-me na cobertura de eventos esportivos de alta velocidade como o motocross, trilhas, vaquejada, futebol, capturando momentos épicos com precisão milimétrica.</p>
+                <p>Unindo a fotografia de alta performance ao design gráfico, entrego um trabalho completo: desde o disparo no terreno até à arte final para redes sociais e imprensa.</p>
 
                 <div class="about-actions">
-                    <a href="#portfolio" class="btn-action-primary">Explorar trabalhos</a>
-                    <a href="https://banlek.com" target="_blank" class="btn-action-secondary">Perfil na Banlek <i class="fas fa-external-link-alt" style="font-size: 0.75rem;"></i></a>
+                    <a href="#portfolio" class="btn-primary" style="padding: 12px 26px; font-size: 0.88rem;">Explorar trabalhos</a>
+                    <a href="https://banlek.com" target="_blank" class="btn-secondary" style="padding: 12px 26px; font-size: 0.88rem;">Perfil na Banlek <i class="fas fa-external-link-alt" style="font-size: 0.75rem;"></i></a>
                 </div>
 
                 <div class="stats-grid">
