@@ -9,10 +9,10 @@
     <link rel="icon" type="image/png" href="Designer.png">
     <link rel="apple-touch-icon" href="Designer.png">
 
-    <!-- Preload das Imagens Principais -->
+    <!-- Preload das Imagens Principais (com versão para limpar cache) -->
     <link rel="preload" as="image" href="danxt.jpg" fetchpriority="high">
-    <link rel="preload" as="image" href="xt12.jpeg" fetchpriority="high">
-    <link rel="preload" as="image" href="dn.jpeg" fetchpriority="high">
+    <link rel="preload" as="image" href="xt12.jpeg?v=2" fetchpriority="high">
+    <link rel="preload" as="image" href="dn.jpeg?v=2" fetchpriority="high">
 
     <!-- Conexões Antecipadas para CDN e Banlek -->
     <link rel="preconnect" href="https://wsrv.nl" crossorigin>
@@ -196,7 +196,7 @@
             justify-content: center;
             padding: 140px 5% 60px;
             background: linear-gradient(180deg, rgba(6, 8, 12, 0.4) 0%, var(--bg-dark) 100%),
-                        url('xt12.jpeg') center/cover no-repeat;
+                        url('xt12.jpeg?v=2') center/cover no-repeat;
         }
 
         .hero-overlay {
@@ -288,7 +288,7 @@
         }
 
         /* ==========================================================================
-           4. FAIXA DE TEXTO PASSANDO AUTOMÁTICO
+           4. FAIXA DE TEXTO PASSANDO AUTOMÁTICO (INFINITE MARQUEE TICKER)
            ========================================================================== */
         .ticker-bar {
             width: 100%;
@@ -996,7 +996,7 @@
                 min-height: 100vh;
                 padding: 130px 5% 50px;
                 background: linear-gradient(180deg, rgba(6, 8, 12, 0.35) 0%, rgba(6, 8, 12, 0.65) 60%, var(--bg-dark) 100%),
-                            url('dn.jpeg') center top / cover no-repeat;
+                            url('dn.jpeg?v=2') center top / cover no-repeat;
             }
 
             .nav-links {
