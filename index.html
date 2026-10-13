@@ -1552,19 +1552,14 @@
         <img src="" id="lightboxImg" class="lightbox-content" alt="Visualização Design">
     </div>
 
-<!-- JAVASCRIPT COM PROTEÇÃO CONTRA CÓPIA E ROUBO -->
+<!-- JAVASCRIPT COMPLETO (COM FECHAMENTO AUTOMÁTICO DO MENU MOBILE) -->
     <script>
         // -----------------------------------------------------------
         // PROTEÇÃO CONTRA CÓPIA E DOWNLOAD DE IMAGENS
         // -----------------------------------------------------------
-        
-        // 1. Bloqueia o botão direito em todo o site
         document.addEventListener('contextmenu', (e) => e.preventDefault());
-
-        // 2. Impede o clique e arraste para salvar fotos/artes
         document.addEventListener('dragstart', (e) => e.preventDefault());
 
-        // 3. Bloqueia atalhos comuns de inspeção de código (F12, Ctrl+Shift+I, Ctrl+U)
         document.addEventListener('keydown', (e) => {
             if (
                 e.key === 'F12' || 
@@ -1576,15 +1571,27 @@
         });
 
         // -----------------------------------------------------------
-        // NAVEGAÇÃO E FUNCIONALIDADES DO SITE
+        // NAVEGAÇÃO E MENU MOBILE
         // -----------------------------------------------------------
         const mobileToggle = document.getElementById('mobileToggle');
         const navLinks = document.getElementById('navLinks');
+        const navItems = document.querySelectorAll('.nav-links a'); // Seleciona todos os links do menu
 
+        // Abre / Fecha o menu ao clicar no ícone de hambúrguer
         mobileToggle.addEventListener('click', () => {
             navLinks.classList.toggle('active');
         });
 
+        // Fecha o menu automaticamente quando clicar em qualquer opção (Início, Sobre, Serviços, etc.)
+        navItems.forEach(item => {
+            item.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+            });
+        });
+
+        // -----------------------------------------------------------
+        // SLIDERS E FILTROS DA GALERIA
+        // -----------------------------------------------------------
         function slideGallery(direction) {
             const slider = document.getElementById('gallerySlider');
             const scrollAmount = 300;
@@ -1631,6 +1638,9 @@
             });
         });
 
+        // -----------------------------------------------------------
+        // LIGHTBOX E WHATSAPP
+        // -----------------------------------------------------------
         function openLightbox(src) {
             document.getElementById('lightboxImg').src = src;
             document.getElementById('lightbox').classList.add('active');
