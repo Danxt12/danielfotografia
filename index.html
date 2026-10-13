@@ -1552,7 +1552,7 @@
         <img src="" id="lightboxImg" class="lightbox-content" alt="Visualização Design">
     </div>
 
-<!-- JAVASCRIPT COMPLETO (COM FECHAMENTO AUTOMÁTICO DO MENU MOBILE) -->
+<!-- JAVASCRIPT COMPLETO (COM MENU ATIVO AUTOMÁTICO E SCROLLSPY) -->
     <script>
         // -----------------------------------------------------------
         // PROTEÇÃO CONTRA CÓPIA E DOWNLOAD DE IMAGENS
@@ -1571,22 +1571,51 @@
         });
 
         // -----------------------------------------------------------
-        // NAVEGAÇÃO E MENU MOBILE
+        // NAVEGAÇÃO, MENU MOBILE E ATUALIZAÇÃO DO ITEM ATIVO
         // -----------------------------------------------------------
         const mobileToggle = document.getElementById('mobileToggle');
         const navLinks = document.getElementById('navLinks');
-        const navItems = document.querySelectorAll('.nav-links a'); // Seleciona todos os links do menu
+        const navItems = document.querySelectorAll('.nav-links a');
 
-        // Abre / Fecha o menu ao clicar no ícone de hambúrguer
+        // Abre / Fecha o menu no telemóvel
         mobileToggle.addEventListener('click', () => {
             navLinks.classList.toggle('active');
         });
 
-        // Fecha o menu automaticamente quando clicar em qualquer opção (Início, Sobre, Serviços, etc.)
+        // Atualiza a marcação ao clicar e fecha o menu mobile
         navItems.forEach(item => {
-            item.addEventListener('click', () => {
+            item.addEventListener('click', function() {
+                navItems.forEach(link => link.classList.remove('active'));
+                this.classList.add('active');
                 navLinks.classList.remove('active');
             });
+        });
+
+        // SCROLLSPY: Identifica a secção visível na tela e atualiza o menu sozinho ao rolar a página
+        const sections = document.querySelectorAll('section[id]');
+        
+        const observerOptions = {
+            root: null,
+            rootMargin: '-20% 0px -60% 0px',
+            threshold: 0
+        };
+
+        const sectionObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const currentId = entry.target.getAttribute('id');
+                    navItems.forEach(link => {
+                        link.classList.remove('active');
+                        if (link.getAttribute('href') === `#${currentId}`) {
+                            link.classList.add('active');
+                        }
+                    });
+                }
+            });
+        }, observerOptions);
+
+        sections.forEach(section => {
+            sectionObserver.observe(section);
         });
 
         // -----------------------------------------------------------
