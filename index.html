@@ -101,7 +101,6 @@
             align-items: center;
         }
 
-        /* LOGO DO TOPO DIMINUÍDA NO COMPUTADOR */
         .logo-brand {
             height: 130px;
             width: auto;
@@ -315,7 +314,7 @@
         }
 
         /* ==========================================================================
-           5. SOBRE MIM - ESTILIZAÇÃO E MOLDURA DA FOTO
+           5. SOBRE MIM - FOTO COM MOLDURA CIANO DESLOCADA (SEM LOGOS ADICIONAIS)
            ========================================================================== */
         .about-grid {
             display: grid;
@@ -326,7 +325,6 @@
             margin: 0 auto;
         }
 
-        /* ENVOLTÓRIO PARA A LINHA DE MOLDURA DESLOCADA */
         .about-img-wrapper {
             position: relative;
             padding-right: 15px;
@@ -334,7 +332,6 @@
             width: 100%;
         }
 
-        /* BORDAS DESLOCADAS EM CIANO (MOLDURA ESTILO CARTAZ) */
         .about-img-wrapper::after {
             content: '';
             position: absolute;
@@ -369,52 +366,6 @@
 
         .about-img-box:hover img {
             transform: scale(1.03);
-        }
-
-        /* DETALHE CARTÃO FLUTUANTE NA FOTO */
-        .about-badge-card {
-            position: absolute;
-            bottom: 18px;
-            left: 18px;
-            background: rgba(14, 17, 23, 0.88);
-            backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
-            border: 1px solid rgba(0, 210, 255, 0.35);
-            padding: 10px 16px;
-            border-radius: 14px;
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.7);
-            z-index: 2;
-        }
-
-        .about-badge-logo {
-            height: 36px;
-            width: auto;
-            object-fit: contain;
-            filter: drop-shadow(0px 0px 8px rgba(0, 210, 255, 0.8));
-        }
-
-        .about-badge-text {
-            display: flex;
-            flex-direction: column;
-        }
-
-        .about-badge-text .badge-title {
-            font-size: 0.85rem;
-            font-weight: 800;
-            color: #ffffff;
-            letter-spacing: 1px;
-            line-height: 1.2;
-            font-family: 'Montserrat', sans-serif;
-        }
-
-        .about-badge-text .badge-subtitle {
-            font-size: 0.7rem;
-            color: var(--accent-cyan);
-            font-weight: 600;
-            letter-spacing: 0.5px;
         }
 
         .about-text h3 {
@@ -815,7 +766,6 @@
             transition: var(--transition);
         }
 
-        /* CORREÇÃO DO MENU SUSPENSO NO COMPUTADOR */
         .form-control option {
             background-color: #14171d;
             color: #ffffff;
@@ -980,7 +930,6 @@
                 display: block;
             }
 
-            /* LOGO DO TOPO DIMINUÍDA NO CELULAR */
             .logo-brand {
                 height: 90px;
                 margin: -10px 0;
@@ -1049,13 +998,6 @@
             <div class="about-img-wrapper">
                 <div class="about-img-box">
                     <img src="Red Gradient Profile Photo Instagram Post.jpg" alt="Daniel Dan XT12 Fotógrafo" fetchpriority="high" decoding="async" width="600" height="600">
-                    <div class="about-badge-card">
-                        <img src="Designer.png" alt="Dan XT12 Logo" class="about-badge-logo">
-                        <div class="about-badge-text">
-                            <span class="badge-title">DAN XT12</span>
-                            <small class="badge-subtitle">Fotógrafo & Designer</small>
-                        </div>
-                    </div>
                 </div>
             </div>
             <div class="about-text">
