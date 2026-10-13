@@ -101,7 +101,6 @@
             align-items: center;
         }
 
-        /* LOGO DO TOPO DIMINUÍDA NO COMPUTADOR */
         .logo-brand {
             height: 130px;
             width: auto;
@@ -397,12 +396,15 @@
             background: var(--bg-card);
             border: 1px solid var(--border-color);
             color: var(--text-muted);
-            padding: 8px 18px;
+            padding: 8px 16px;
             border-radius: 25px;
             font-weight: 600;
             font-size: 0.85rem;
             cursor: pointer;
             transition: var(--transition);
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
         }
 
         .filter-btn:hover,
@@ -411,6 +413,23 @@
             color: #fff;
             border-color: transparent;
             box-shadow: 0 4px 15px rgba(0, 210, 255, 0.3);
+        }
+
+        /* CONTADOR DE ÁLBUNS NOS BOTÕES (BADGE) */
+        .filter-count {
+            background: rgba(255, 255, 255, 0.12);
+            color: var(--text-main);
+            font-size: 0.75rem;
+            font-weight: 700;
+            padding: 2px 7px;
+            border-radius: 12px;
+            transition: var(--transition);
+        }
+
+        .filter-btn:hover .filter-count,
+        .filter-btn.active .filter-count {
+            background: rgba(255, 255, 255, 0.25);
+            color: #fff;
         }
 
         .slider-wrapper {
@@ -903,7 +922,6 @@
                 display: block;
             }
 
-            /* LOGO DO TOPO DIMINUÍDA NO CELULAR */
             .logo-brand {
                 height: 90px;
                 margin: -10px 0;
@@ -996,7 +1014,7 @@
         </div>
     </section>
 
-    <!-- PORTFÓLIO - ÁLBUNS OTIMIZADOS (CDN WebP + Proporção 3:4) -->
+    <!-- PORTFÓLIO - ÁLBUNS OTIMIZADOS (COM CONTADOR EM CADA BOTÃO DE FILTRO) -->
     <section id="portfolio" style="background: rgba(20, 23, 29, 0.4);">
         <div class="section-header">
             <h2 class="section-title">PORTFÓLIO EM DESTAQUE</h2>
@@ -1005,21 +1023,21 @@
         </div>
 
         <div class="filter-container">
-            <button class="filter-btn active" data-filter="all">Todos</button>
-            <button class="filter-btn" data-filter="recentes">Recentes</button>
-            <button class="filter-btn" data-filter="motocross">Motocross & Ação</button>
-            <button class="filter-btn" data-filter="ensaios">Ensaios</button>
-            <button class="filter-btn" data-filter="futebol">Futebol</button>
-            <button class="filter-btn" data-filter="beachtennis">Beach Tennis</button>
-            <button class="filter-btn" data-filter="futsal">Futsal</button>
-            <button class="filter-btn" data-filter="corridarun">Corrida Run</button>
-            <button class="filter-btn" data-filter="volei">Vôlei</button>
-            <button class="filter-btn" data-filter="futevolei">Futevôlei</button>
-            <button class="filter-btn" data-filter="eventos">Eventos</button>
-            <button class="filter-btn" data-filter="tenis">Tênis</button>
-            <button class="filter-btn" data-filter="vaquejada">Vaquejada</button>
-            <button class="filter-btn" data-filter="cavalgada">Cavalgada</button>
-            <button class="filter-btn" data-filter="outros">Outros</button>
+            <button class="filter-btn active" data-filter="all">Todos <span class="filter-count">39</span></button>
+            <button class="filter-btn" data-filter="recentes">Recentes <span class="filter-count">39</span></button>
+            <button class="filter-btn" data-filter="motocross">Motocross & Ação <span class="filter-count">4</span></button>
+            <button class="filter-btn" data-filter="ensaios">Ensaios <span class="filter-count">1</span></button>
+            <button class="filter-btn" data-filter="futebol">Futebol <span class="filter-count">19</span></button>
+            <button class="filter-btn" data-filter="beachtennis">Beach Tennis <span class="filter-count">3</span></button>
+            <button class="filter-btn" data-filter="futsal">Futsal <span class="filter-count">1</span></button>
+            <button class="filter-btn" data-filter="corridarun">Corrida Run <span class="filter-count">0</span></button>
+            <button class="filter-btn" data-filter="volei">Vôlei <span class="filter-count">2</span></button>
+            <button class="filter-btn" data-filter="futevolei">Futevôlei <span class="filter-count">2</span></button>
+            <button class="filter-btn" data-filter="eventos">Eventos <span class="filter-count">1</span></button>
+            <button class="filter-btn" data-filter="tenis">Tênis <span class="filter-count">0</span></button>
+            <button class="filter-btn" data-filter="vaquejada">Vaquejada <span class="filter-count">5</span></button>
+            <button class="filter-btn" data-filter="cavalgada">Cavalgada <span class="filter-count">3</span></button>
+            <button class="filter-btn" data-filter="outros">Outros <span class="filter-count">0</span></button>
         </div>
 
         <div class="slider-wrapper">
@@ -1388,7 +1406,7 @@
         </div>
     </section>
 
-    <!-- SECÇÃO EXCLUSIVA - DESIGN GRÁFICO OTIMIZADO (Proporção 4:5 + Lazy) -->
+    <!-- SECÇÃO EXCLUSIVA - DESIGN GRÁFICO OTIMIZADO -->
     <section id="design-grafico">
         <div class="section-header">
             <h2 class="section-title">DESIGN GRÁFICO</h2>
@@ -1554,7 +1572,7 @@
         <img src="" id="lightboxImg" class="lightbox-content" alt="Visualização Design">
     </div>
 
-    <!-- JAVASCRIPT COMPLETO (COM MENU ATIVO AUTOMÁTICO E SCROLLSPY) -->
+    <!-- JAVASCRIPT COMPLETO -->
     <script>
         // -----------------------------------------------------------
         // PROTEÇÃO CONTRA CÓPIA E DOWNLOAD DE IMAGENS
@@ -1573,18 +1591,16 @@
         });
 
         // -----------------------------------------------------------
-        // NAVEGAÇÃO, MENU MOBILE E ATUALIZAÇÃO DO ITEM ATIVO
+        // NAVEGAÇÃO, MENU MOBILE E SCROLLSPY
         // -----------------------------------------------------------
         const mobileToggle = document.getElementById('mobileToggle');
         const navLinks = document.getElementById('navLinks');
         const navItems = document.querySelectorAll('.nav-links a');
 
-        // Abre / Fecha o menu no telemóvel
         mobileToggle.addEventListener('click', () => {
             navLinks.classList.toggle('active');
         });
 
-        // Atualiza a marcação ao clicar e fecha o menu mobile
         navItems.forEach(item => {
             item.addEventListener('click', function() {
                 navItems.forEach(link => link.classList.remove('active'));
@@ -1593,7 +1609,6 @@
             });
         });
 
-        // SCROLLSPY: Identifica a secção visível na tela e atualiza o menu sozinho ao rolar a página
         const sections = document.querySelectorAll('section[id]');
         
         const observerOptions = {
@@ -1621,7 +1636,7 @@
         });
 
         // -----------------------------------------------------------
-        // SLIDERS E FILTROS DA GALERIA
+        // SLIDERS, FILTROS E CONTAGEM DINÂMICA DE ÁLBUNS
         // -----------------------------------------------------------
         function slideGallery(direction) {
             const slider = document.getElementById('gallerySlider');
@@ -1646,6 +1661,36 @@
         const filterBtns = document.querySelectorAll('.filter-btn');
         const galleryItems = document.querySelectorAll('.gallery-item');
         const gallerySlider = document.getElementById('gallerySlider');
+
+        // Função que calcula e atualiza dinamicamente a contagem em cada botão
+        function updateFilterCounts() {
+            filterBtns.forEach(btn => {
+                const filter = btn.getAttribute('data-filter');
+                let count = 0;
+
+                if (filter === 'all') {
+                    count = galleryItems.length;
+                } else {
+                    galleryItems.forEach(item => {
+                        const categories = item.getAttribute('data-category').split(' ');
+                        if (categories.includes(filter)) {
+                            count++;
+                        }
+                    });
+                }
+
+                let countSpan = btn.querySelector('.filter-count');
+                if (!countSpan) {
+                    countSpan = document.createElement('span');
+                    countSpan.className = 'filter-count';
+                    btn.appendChild(countSpan);
+                }
+                countSpan.textContent = count;
+            });
+        }
+
+        // Executa a contagem ao carregar a página
+        document.addEventListener('DOMContentLoaded', updateFilterCounts);
 
         filterBtns.forEach(btn => {
             btn.addEventListener('click', () => {
