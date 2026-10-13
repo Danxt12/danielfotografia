@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dan XT12 | Fotógrafo & Designer Gráfico</title>
 
-    <!-- Preload da Logo e da Imagem de Fundo do Hero -->
-    <link rel="preload" as="image" href="Designer.png" fetchpriority="high">
+    <!-- Preload das Imagens Principais -->
+    <link rel="preload" as="image" href="danxt.jpeg" fetchpriority="high">
     <link rel="preload" as="image" href="Red Gradient Profile Photo Instagram Post (1920 x 1080 px).jpg" fetchpriority="high">
 
     <!-- Conexões Antecipadas para CDN e Banlek -->
@@ -96,8 +96,6 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            
-            /* ESTADO INICIAL NO TOPO: Totalmente limpo/transparente */
             background: transparent;
             backdrop-filter: blur(0px);
             -webkit-backdrop-filter: blur(0px);
@@ -105,7 +103,6 @@
             transition: background 0.4s ease, backdrop-filter 0.4s ease, border-color 0.4s ease, padding 0.3s ease;
         }
 
-        /* ESTADO AO DESCER A PÁGINA (SCROLLED) */
         header.scrolled {
             padding: 8px 5%;
             background: rgba(6, 8, 12, 0.65);
@@ -184,7 +181,7 @@
         }
 
         /* ==========================================================================
-           3. HERO SECTION
+           3. HERO SECTION (IMAGEM DE FUNDO - PC)
            ========================================================================== */
         .hero {
             position: relative;
@@ -862,7 +859,7 @@
         }
 
         /* ==========================================================================
-           10. FOOTER, MODAL & FLOATING BUTTONS
+           10. FOOTER, MODAL & RESPONSIVIDADE
            ========================================================================== */
         footer {
             background: #040508;
@@ -988,7 +985,14 @@
             }
         }
 
+        /* MEDIA QUERY CELULAR (MOBILE) */
         @media (max-width: 768px) {
+            /* TROCA A IMAGEM DO HERO PARA A VERSÃO DE CELULAR */
+            .hero {
+                background: linear-gradient(180deg, rgba(6, 8, 12, 0.3) 0%, var(--bg-dark) 100%),
+                            url('Red Gradient Profile Photo Instagram Post.jpg') center/cover no-repeat;
+            }
+
             .nav-links {
                 position: fixed;
                 top: 70px;
@@ -1104,12 +1108,12 @@
         </div>
     </div>
 
-    <!-- SOBRE MIM -->
+    <!-- SOBRE MIM / CONHECER O FOTÓGRAFO -->
     <section id="sobre">
         <div class="about-grid">
             <div class="about-img-wrapper">
                 <div class="about-img-box">
-                    <img src="Red Gradient Profile Photo Instagram Post.jpg" alt="Daniel Dan XT12 Fotógrafo" fetchpriority="high" decoding="async" width="600" height="600">
+                    <img src="danxt.jpeg" alt="Daniel Dan XT12 Fotógrafo" fetchpriority="high" decoding="async" width="600" height="600">
                 </div>
             </div>
 
@@ -1714,7 +1718,7 @@
         }
 
         window.addEventListener('scroll', handleHeaderScroll);
-        handleHeaderScroll(); // Garante o estado correto na inicialização
+        handleHeaderScroll();
 
         // PROTEÇÃO AVANÇADA CONTRA CÓPIA, INSPEÇÃO E DOWNLOAD DE IMAGENS
         document.addEventListener('contextmenu', (e) => e.preventDefault());
