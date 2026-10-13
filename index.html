@@ -11,7 +11,8 @@
 
     <!-- Preload das Imagens Principais -->
     <link rel="preload" as="image" href="danxt.jpeg" fetchpriority="high">
-    <link rel="preload" as="image" href="xt12.jpeg" fetchpriority="high">
+    <link rel="preload" as="image" href="xt12.jpg" fetchpriority="high">
+    <link rel="preload" as="image" href="dn.jpg" fetchpriority="high">
 
     <!-- Conexões Antecipadas para CDN e Banlek -->
     <link rel="preconnect" href="https://wsrv.nl" crossorigin>
@@ -185,7 +186,7 @@
         }
 
         /* ==========================================================================
-           3. HERO SECTION (IMAGEM DE FUNDO - PC)
+           3. HERO SECTION (FUNDOM COMPUTADOR: xt12.jpg)
            ========================================================================== */
         .hero {
             position: relative;
@@ -195,7 +196,7 @@
             justify-content: center;
             padding: 140px 5% 60px;
             background: linear-gradient(180deg, rgba(6, 8, 12, 0.4) 0%, var(--bg-dark) 100%),
-                        url('SAVE_20261013_113359.jpg.jpg') center/cover no-repeat;
+                        url('xt12.jpg') center/cover no-repeat;
         }
 
         .hero-overlay {
@@ -331,7 +332,7 @@
         }
 
         /* ==========================================================================
-           5. SOBRE MIM (CONHECER O FOTÓGRAFO - PROPORÇÃO NATURAL)
+           5. SOBRE MIM (CONHECER O FOTÓGRAFO - USANDO: danxt.jpeg)
            ========================================================================== */
         section {
             padding: 80px 5%;
@@ -989,13 +990,13 @@
             }
         }
 
-        /* MEDIA QUERY CELULAR (MOBILE AJUSTADO - CERA TOTALMENTE A TELA) */
+        /* MEDIA QUERY TELEMÓVEL (MOBILE - FUNDO: dn.jpg) */
         @media (max-width: 768px) {
             .hero {
                 min-height: 100vh;
                 padding: 130px 5% 60px;
                 background: linear-gradient(180deg, rgba(6, 8, 12, 0.45) 0%, rgba(6, 8, 12, 0.75) 70%, var(--bg-dark) 100%),
-                            url('Red Gradient Profile Photo Instagram Post_20250910_111938_0000.jpg_2.jpg') center/cover no-repeat;
+                            url('dn.jpg') center/cover no-repeat;
             }
 
             .nav-links {
