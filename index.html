@@ -5,17 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dan XT12 | Fotógrafo & Designer Gráfico</title>
 
-    <!-- 1. PRELOAD DA LOGO E DA IMAGEM DE FUNDO DO HERO -->
+    <!-- Preload da Logo e Imagem Hero -->
     <link rel="preload" as="image" href="Designer.png" fetchpriority="high">
     <link rel="preload" as="image" href="Red Gradient Profile Photo Instagram Post (1920 x 1080 px).jpg" fetchpriority="high">
 
-    <!-- Conexões Antecipadas para CDN e Banlek -->
+    <!-- Conexões Antecipadas -->
     <link rel="preconnect" href="https://wsrv.nl" crossorigin>
     <link rel="dns-prefetch" href="https://wsrv.nl">
     <link rel="preconnect" href="https://d2hk32cswy6zx7.cloudfront.net" crossorigin>
     <link rel="dns-prefetch" href="https://d2hk32cswy6zx7.cloudfront.net">
 
-    <!-- Google Fonts & Font Awesome Icons -->
+    <!-- Google Fonts & Icons -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -103,7 +103,6 @@
             align-items: center;
         }
 
-        /* LOGO SEM ALTERAÇÃO DE TAMANHO */
         .logo-brand {
             height: 130px;
             width: auto;
@@ -118,7 +117,6 @@
             filter: drop-shadow(0px 0px 22px rgba(0, 210, 255, 1));
         }
 
-        /* MENU EM CÁPSULAS DA REFERÊNCIA */
         .nav-links {
             display: flex;
             gap: 8px;
@@ -145,7 +143,6 @@
             border: 1px solid rgba(0, 210, 255, 0.3);
         }
 
-        /* BOTÃO ORÇAMENTO INTACADO */
         .btn-header {
             background: linear-gradient(135deg, var(--accent-cyan), var(--accent-blue));
             color: #fff;
@@ -310,7 +307,7 @@
         }
 
         /* ==========================================================================
-           5. SOBRE MIM - FOTO COM MOLDURA ORIGINAL & DAN XT12 TUDO EM AZUL
+           5. SOBRE MIM
            ========================================================================== */
         .about-grid {
             display: grid;
@@ -410,7 +407,7 @@
         }
 
         /* ==========================================================================
-           6. PORTFÓLIO & ÁLBUNS OTIMIZADOS
+           6. PORTFÓLIO & ÁLBUNS
            ========================================================================== */
         .filter-container {
             display: flex;
@@ -576,7 +573,7 @@
         .slide-btn.next { right: -15px; }
 
         /* ==========================================================================
-           7. DESIGN GRÁFICO OTIMIZADO
+           7. DESIGN GRÁFICO
            ========================================================================== */
         .design-card {
             flex: 0 0 calc(25% - 19px);
@@ -960,7 +957,7 @@
 </head>
 <body>
 
-    <!-- NAVEGAÇÃO / HEADER -->
+    <!-- HEADER / NAVEGAÇÃO -->
     <header>
         <a href="#home" class="logo-container">
             <img src="Designer.png" alt="Dan XT12 Logo Oficial" class="logo-brand" fetchpriority="high" decoding="async" width="130" height="130">
@@ -1012,7 +1009,7 @@
             <div class="about-text">
                 <span class="section-subtitle-albums" style="font-size: 0.85rem; margin-bottom: 10px;">CONHECE O FOTÓGRAFO</span>
                 <h3>DANIEL — <span class="text-cyan">DAN XT12</span></h3>
-                <p>Sou fotógrafo e designer gráfico apaixonado pela adrenalina, movimento e expressões autênticas. Especializei-me na cobertura de eventos esportivos de alta velocidade como o motocross, trilhas, vaquejada, futebol, capturando momentos épicos com precisão milimétrica.</p>
+                <p>Sou fotógrafo e designer gráfico apaixonado pela adrenaline, movimento e expressões autênticas. Especializei-me na cobertura de eventos esportivos de alta velocidade como o motocross, trilhas, vaquejada, futebol, capturando momentos épicos com precisão milimétrica.</p>
                 <p>Unindo a fotografia de alta performance ao design gráfico, entrego um trabalho completo: desde o disparo no terreno até à arte final para redes sociais e imprensa.</p>
 
                 <div class="about-actions">
@@ -1038,7 +1035,7 @@
         </div>
     </section>
 
-    <!-- PORTFÓLIO - ÁLBUNS OTIMIZADOS -->
+    <!-- PORTFÓLIO & ÁLBUNS -->
     <section id="portfolio" style="background: rgba(13, 18, 29, 0.4);">
         <div class="section-header">
             <h2 class="section-title">PORTFÓLIO EM DESTAQUE</h2>
@@ -1070,7 +1067,6 @@
             </button>
 
             <div class="gallery-slider" id="gallerySlider">
-                
                 <a href="https://banlek.com/album/2734b9" target="_blank" class="gallery-item" data-category="beachtennis recentes">
                     <img src="https://wsrv.nl/?url=https://d2hk32cswy6zx7.cloudfront.net/a176b2905ad0eb52c0b80cc1cc697eb6/v2_727c3dd3-5d28-4c40-984e-d91038f8f4e8.jpg&w=400&output=webp&q=75" alt="Capa Álbum Beach Tennis" width="400" height="533" loading="lazy" decoding="async">
                     <div class="gallery-overlay">
@@ -1421,7 +1417,6 @@
                         <span class="banlek-btn"><i class="fas fa-external-link-alt"></i> Acessar Álbum Banlek</span>
                     </div>
                 </a>                
-
             </div>
 
             <button class="slide-btn next" onclick="slideGallery('right')">
@@ -1430,7 +1425,7 @@
         </div>
     </section>
 
-    <!-- SECÇÃO EXCLUSIVA - DESIGN GRÁFICO OTIMIZADO -->
+    <!-- DESIGN GRÁFICO -->
     <section id="design-grafico">
         <div class="section-header">
             <h2 class="section-title">DESIGN GRÁFICO</h2>
@@ -1570,7 +1565,7 @@
         </div>
     </section>
 
-    <!-- FOOTER / LOGO RODA PÉ -->
+    <!-- FOOTER -->
     <footer>
         <div class="footer-content">
             <a href="#home">
@@ -1596,9 +1591,8 @@
         <img src="" id="lightboxImg" class="lightbox-content" alt="Visualização Design">
     </div>
 
-    <!-- JAVASCRIPT COMPLETO -->
+    <!-- JAVASCRIPT -->
     <script>
-        // PROTEÇÃO CONTRA CÓPIA E DOWNLOAD DE IMAGENS
         document.addEventListener('contextmenu', (e) => e.preventDefault());
         document.addEventListener('dragstart', (e) => e.preventDefault());
 
@@ -1612,7 +1606,6 @@
             }
         });
 
-        // NAVEGAÇÃO, MENU MOBILE E ATUALIZAÇÃO DO ITEM ATIVO
         const mobileToggle = document.getElementById('mobileToggle');
         const navLinks = document.getElementById('navLinks');
         const navItems = document.querySelectorAll('.nav-links a');
@@ -1655,7 +1648,6 @@
             sectionObserver.observe(section);
         });
 
-        // SLIDERS E FILTROS DA GALERIA
         function slideGallery(direction) {
             const slider = document.getElementById('gallerySlider');
             const scrollAmount = 300;
@@ -1702,7 +1694,6 @@
             });
         });
 
-        // LIGHTBOX E WHATSAPP
         function openLightbox(src) {
             document.getElementById('lightboxImg').src = src;
             document.getElementById('lightbox').classList.add('active');
