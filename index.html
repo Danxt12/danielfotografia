@@ -23,18 +23,17 @@
 
     <style>
         /* ==========================================================================
-           1. VARIÁVEIS E RESET GLOBAL (FUNDO FADE AZUL ESCURO MANTIDO)
+           1. VARIÁVEIS E RESET GLOBAL
            ========================================================================== */
         :root {
             --bg-dark: #06080c;
             --bg-card: #0d121d;
-            --bg-nav: rgba(6, 8, 12, 0.35); /* Transparência ajustada */
             --accent-cyan: #00d2ff;
             --accent-blue: #0072ff;
             --accent-gold: #e5b842;
             --text-main: #f0f4f8;
             --text-muted: #9ca3af;
-            --border-color: rgba(255, 255, 255, 0.05);
+            --border-color: rgba(255, 255, 255, 0.08);
             --transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
             --radius: 12px;
         }
@@ -84,14 +83,8 @@
             -ms-user-select: none;
         }
 
-        @keyframes pulseSkeleton {
-            0% { background-color: #0d121d; }
-            50% { background-color: #161e2e; }
-            100% { background-color: #0d121d; }
-        }
-
         /* ==========================================================================
-           2. NAVEGAÇÃO / HEADER
+           2. NAVEGAÇÃO / HEADER DINÂMICO
            ========================================================================== */
         header {
             position: fixed;
@@ -99,14 +92,26 @@
             left: 0;
             width: 100%;
             z-index: 1000;
-            background: var(--bg-nav);
-            backdrop-filter: blur(16px);
-            -webkit-backdrop-filter: blur(16px);
-            border-bottom: 1px solid var(--border-color);
-            padding: 8px 5%;
+            padding: 12px 5%;
             display: flex;
             justify-content: space-between;
             align-items: center;
+            
+            /* ESTADO INICIAL NO TOPO: Totalmente limpo/transparente */
+            background: transparent;
+            backdrop-filter: blur(0px);
+            -webkit-backdrop-filter: blur(0px);
+            border-bottom: 1px solid transparent;
+            transition: background 0.4s ease, backdrop-filter 0.4s ease, border-color 0.4s ease, padding 0.3s ease;
+        }
+
+        /* ESTADO AO DESCER A PÁGINA (SCROLLED) */
+        header.scrolled {
+            padding: 8px 5%;
+            background: rgba(6, 8, 12, 0.65);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border-bottom: 1px solid var(--border-color);
         }
 
         .logo-container {
@@ -115,7 +120,7 @@
         }
 
         .logo-brand {
-            height: 130px;
+            height: 120px;
             width: auto;
             object-fit: contain;
             filter: drop-shadow(0px 0px 15px rgba(0, 210, 255, 0.7));
@@ -1027,7 +1032,7 @@
 <body>
 
     <!-- NAVEGAÇÃO / HEADER -->
-    <header>
+    <header id="header">
         <a href="#home" class="logo-container">
             <img src="Designer.png" alt="Dan XT12 Logo Oficial" class="logo-brand" fetchpriority="high" decoding="async" width="130" height="130">
         </a>
@@ -1697,6 +1702,20 @@
 
     <!-- JAVASCRIPT COMPLETO -->
     <script>
+        // CONTROLE DO HEADER DINÂMICO AO ROLAR A PÁGINA
+        const headerElement = document.getElementById('header');
+
+        function handleHeaderScroll() {
+            if (window.scrollY > 30) {
+                headerElement.classList.add('scrolled');
+            } else {
+                headerElement.classList.remove('scrolled');
+            }
+        }
+
+        window.addEventListener('scroll', handleHeaderScroll);
+        handleHeaderScroll(); // Garante o estado correto na inicialização
+
         // PROTEÇÃO AVANÇADA CONTRA CÓPIA, INSPEÇÃO E DOWNLOAD DE IMAGENS
         document.addEventListener('contextmenu', (e) => e.preventDefault());
         document.addEventListener('dragstart', (e) => e.preventDefault());
