@@ -379,12 +379,12 @@
         }
 
         /* ==========================================================================
-           6. PORTFÓLIO & ÁLBUNS OTIMIZADOS
+           6. PORTFÓLIO & ÁLBUNS (LAYOUT ORIGINAL COM NUMERAÇÃO SUAVE)
            ========================================================================== */
         .filter-container {
             display: flex;
             justify-content: center;
-            gap: 10px;
+            gap: 8px;
             flex-wrap: wrap;
             margin-bottom: 35px;
             max-width: 1100px;
@@ -402,9 +402,7 @@
             font-size: 0.85rem;
             cursor: pointer;
             transition: var(--transition);
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
+            white-space: nowrap;
         }
 
         .filter-btn:hover,
@@ -415,21 +413,12 @@
             box-shadow: 0 4px 15px rgba(0, 210, 255, 0.3);
         }
 
-        /* CONTADOR DE ÁLBUNS NOS BOTÕES (BADGE) */
+        /* NUMERAÇÃO DISCRETA E ELEGANTE */
         .filter-count {
-            background: rgba(255, 255, 255, 0.12);
-            color: var(--text-main);
-            font-size: 0.75rem;
-            font-weight: 700;
-            padding: 2px 7px;
-            border-radius: 12px;
-            transition: var(--transition);
-        }
-
-        .filter-btn:hover .filter-count,
-        .filter-btn.active .filter-count {
-            background: rgba(255, 255, 255, 0.25);
-            color: #fff;
+            font-size: 0.82em;
+            opacity: 0.85;
+            margin-left: 3px;
+            font-weight: 500;
         }
 
         .slider-wrapper {
@@ -931,6 +920,16 @@
                 height: 150px;
             }
 
+            /* MANTÉM OS 3 BOTÕES POR LINHA PERFEITAMENTE IGUAL À FOTO 1 */
+            .filter-container {
+                gap: 6px;
+            }
+
+            .filter-btn {
+                padding: 6px 11px;
+                font-size: 0.78rem;
+            }
+
             .gallery-item,
             .design-card {
                 flex: 0 0 75%;
@@ -1014,7 +1013,7 @@
         </div>
     </section>
 
-    <!-- PORTFÓLIO - ÁLBUNS OTIMIZADOS (COM CONTADOR EM CADA BOTÃO DE FILTRO) -->
+    <!-- PORTFÓLIO - ÁLBUNS OTIMIZADOS -->
     <section id="portfolio" style="background: rgba(20, 23, 29, 0.4);">
         <div class="section-header">
             <h2 class="section-title">PORTFÓLIO EM DESTAQUE</h2>
@@ -1023,21 +1022,21 @@
         </div>
 
         <div class="filter-container">
-            <button class="filter-btn active" data-filter="all">Todos <span class="filter-count">39</span></button>
-            <button class="filter-btn" data-filter="recentes">Recentes <span class="filter-count">39</span></button>
-            <button class="filter-btn" data-filter="motocross">Motocross & Ação <span class="filter-count">4</span></button>
-            <button class="filter-btn" data-filter="ensaios">Ensaios <span class="filter-count">1</span></button>
-            <button class="filter-btn" data-filter="futebol">Futebol <span class="filter-count">19</span></button>
-            <button class="filter-btn" data-filter="beachtennis">Beach Tennis <span class="filter-count">3</span></button>
-            <button class="filter-btn" data-filter="futsal">Futsal <span class="filter-count">1</span></button>
-            <button class="filter-btn" data-filter="corridarun">Corrida Run <span class="filter-count">0</span></button>
-            <button class="filter-btn" data-filter="volei">Vôlei <span class="filter-count">2</span></button>
-            <button class="filter-btn" data-filter="futevolei">Futevôlei <span class="filter-count">2</span></button>
-            <button class="filter-btn" data-filter="eventos">Eventos <span class="filter-count">1</span></button>
-            <button class="filter-btn" data-filter="tenis">Tênis <span class="filter-count">0</span></button>
-            <button class="filter-btn" data-filter="vaquejada">Vaquejada <span class="filter-count">5</span></button>
-            <button class="filter-btn" data-filter="cavalgada">Cavalgada <span class="filter-count">3</span></button>
-            <button class="filter-btn" data-filter="outros">Outros <span class="filter-count">0</span></button>
+            <button class="filter-btn active" data-filter="all">Todos <span class="filter-count">(39)</span></button>
+            <button class="filter-btn" data-filter="recentes">Recentes <span class="filter-count">(39)</span></button>
+            <button class="filter-btn" data-filter="motocross">Motocross & Ação <span class="filter-count">(4)</span></button>
+            <button class="filter-btn" data-filter="ensaios">Ensaios <span class="filter-count">(1)</span></button>
+            <button class="filter-btn" data-filter="futebol">Futebol <span class="filter-count">(19)</span></button>
+            <button class="filter-btn" data-filter="beachtennis">Beach Tennis <span class="filter-count">(3)</span></button>
+            <button class="filter-btn" data-filter="futsal">Futsal <span class="filter-count">(1)</span></button>
+            <button class="filter-btn" data-filter="corridarun">Corrida Run <span class="filter-count">(0)</span></button>
+            <button class="filter-btn" data-filter="volei">Vôlei <span class="filter-count">(2)</span></button>
+            <button class="filter-btn" data-filter="futevolei">Futevôlei <span class="filter-count">(2)</span></button>
+            <button class="filter-btn" data-filter="eventos">Eventos <span class="filter-count">(1)</span></button>
+            <button class="filter-btn" data-filter="tenis">Tênis <span class="filter-count">(0)</span></button>
+            <button class="filter-btn" data-filter="vaquejada">Vaquejada <span class="filter-count">(5)</span></button>
+            <button class="filter-btn" data-filter="cavalgada">Cavalgada <span class="filter-count">(3)</span></button>
+            <button class="filter-btn" data-filter="outros">Outros <span class="filter-count">(0)</span></button>
         </div>
 
         <div class="slider-wrapper">
@@ -1636,7 +1635,7 @@
         });
 
         // -----------------------------------------------------------
-        // SLIDERS, FILTROS E CONTAGEM DINÂMICA DE ÁLBUNS
+        // SLIDERS, FILTROS E CONTAGEM DINÂMICA
         // -----------------------------------------------------------
         function slideGallery(direction) {
             const slider = document.getElementById('gallerySlider');
@@ -1662,7 +1661,7 @@
         const galleryItems = document.querySelectorAll('.gallery-item');
         const gallerySlider = document.getElementById('gallerySlider');
 
-        // Função que calcula e atualiza dinamicamente a contagem em cada botão
+        // Atualização automática dos números sem alterar o tamanho do botão
         function updateFilterCounts() {
             filterBtns.forEach(btn => {
                 const filter = btn.getAttribute('data-filter');
@@ -1685,11 +1684,10 @@
                     countSpan.className = 'filter-count';
                     btn.appendChild(countSpan);
                 }
-                countSpan.textContent = count;
+                countSpan.textContent = `(${count})`;
             });
         }
 
-        // Executa a contagem ao carregar a página
         document.addEventListener('DOMContentLoaded', updateFilterCounts);
 
         filterBtns.forEach(btn => {
