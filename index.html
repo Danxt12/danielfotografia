@@ -28,13 +28,13 @@
         :root {
             --bg-dark: #06080c;
             --bg-card: #0d121d;
-            --bg-nav: rgba(6, 8, 12, 0.88);
+            --bg-nav: rgba(6, 8, 12, 0.35); /* Transparência ajustada */
             --accent-cyan: #00d2ff;
             --accent-blue: #0072ff;
             --accent-gold: #e5b842;
             --text-main: #f0f4f8;
             --text-muted: #9ca3af;
-            --border-color: rgba(255, 255, 255, 0.08);
+            --border-color: rgba(255, 255, 255, 0.05);
             --transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
             --radius: 12px;
         }
@@ -72,13 +72,13 @@
             max-width: 100%;
             height: auto;
             display: block;
-            pointer-events: none; /* Desativa cliques e seleções diretas na imagem */
-            -webkit-user-drag: none; /* Impede arrastar no Chrome/Safari */
+            pointer-events: none;
+            -webkit-user-drag: none;
             -khtml-user-drag: none;
             -moz-user-drag: none;
             -o-user-drag: none;
             user-drag: none;
-            user-select: none; /* Impede seleção visual */
+            user-select: none;
             -webkit-user-select: none;
             -moz-user-select: none;
             -ms-user-select: none;
@@ -100,8 +100,8 @@
             width: 100%;
             z-index: 1000;
             background: var(--bg-nav);
-            backdrop-filter: blur(14px);
-            -webkit-backdrop-filter: blur(14px);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
             border-bottom: 1px solid var(--border-color);
             padding: 8px 5%;
             display: flex;
@@ -149,9 +149,10 @@
         }
 
         .nav-links a.active {
-            background: rgba(0, 210, 255, 0.12);
+            background: rgba(0, 210, 255, 0.18);
             color: var(--accent-cyan);
-            border: 1px solid rgba(0, 210, 255, 0.3);
+            border: none;
+            font-weight: 600;
         }
 
         .btn-header {
@@ -1025,7 +1026,7 @@
 </head>
 <body>
 
-    <!-- NAVEGAÇÃO / HEADER (SEM A OPÇÃO "DESTAQUE") -->
+    <!-- NAVEGAÇÃO / HEADER -->
     <header>
         <a href="#home" class="logo-container">
             <img src="Designer.png" alt="Dan XT12 Logo Oficial" class="logo-brand" fetchpriority="high" decoding="async" width="130" height="130">
@@ -1065,10 +1066,9 @@
         </div>
     </section>
 
-    <!-- FAIXA PASSANDO AUTOMÁTICA (CARROSSEL INFINITO DE CATEGORIAS) -->
+    <!-- FAIXA PASSANDO AUTOMÁTICA -->
     <div class="ticker-bar">
         <div class="ticker-track">
-            <!-- Bloco 1 -->
             <div class="ticker-item"><span class="dot">•</span> FUTEVÔLEI</div>
             <div class="ticker-item"><span class="dot">•</span> CAVALGADA</div>
             <div class="ticker-item"><span class="dot">•</span> ENSAIOS</div>
@@ -1083,7 +1083,6 @@
             <div class="ticker-item"><span class="dot">•</span> VÔLEI</div>
             <div class="ticker-item"><span class="dot">•</span> TÊNIS</div>
 
-            <!-- Bloco 2 (Para efeito de loop sem emendas) -->
             <div class="ticker-item"><span class="dot">•</span> FUTEVÔLEI</div>
             <div class="ticker-item"><span class="dot">•</span> CAVALGADA</div>
             <div class="ticker-item"><span class="dot">•</span> ENSAIOS</div>
