@@ -101,6 +101,7 @@
             align-items: center;
         }
 
+        /* LOGO DO TOPO DIMINUÍDA NO COMPUTADOR */
         .logo-brand {
             height: 130px;
             width: auto;
@@ -379,12 +380,12 @@
         }
 
         /* ==========================================================================
-           6. PORTFÓLIO & ÁLBUNS (LAYOUT ORIGINAL COM NUMERAÇÃO SUAVE)
+           6. PORTFÓLIO & ÁLBUNS OTIMIZADOS
            ========================================================================== */
         .filter-container {
             display: flex;
             justify-content: center;
-            gap: 8px;
+            gap: 10px;
             flex-wrap: wrap;
             margin-bottom: 35px;
             max-width: 1100px;
@@ -396,13 +397,12 @@
             background: var(--bg-card);
             border: 1px solid var(--border-color);
             color: var(--text-muted);
-            padding: 8px 16px;
+            padding: 8px 18px;
             border-radius: 25px;
             font-weight: 600;
             font-size: 0.85rem;
             cursor: pointer;
             transition: var(--transition);
-            white-space: nowrap;
         }
 
         .filter-btn:hover,
@@ -411,14 +411,6 @@
             color: #fff;
             border-color: transparent;
             box-shadow: 0 4px 15px rgba(0, 210, 255, 0.3);
-        }
-
-        /* NUMERAÇÃO DISCRETA E ELEGANTE */
-        .filter-count {
-            font-size: 0.82em;
-            opacity: 0.85;
-            margin-left: 3px;
-            font-weight: 500;
         }
 
         .slider-wrapper {
@@ -911,6 +903,7 @@
                 display: block;
             }
 
+            /* LOGO DO TOPO DIMINUÍDA NO CELULAR */
             .logo-brand {
                 height: 90px;
                 margin: -10px 0;
@@ -918,16 +911,6 @@
 
             .footer-logo {
                 height: 150px;
-            }
-
-            /* MANTÉM OS 3 BOTÕES POR LINHA PERFEITAMENTE IGUAL À FOTO 1 */
-            .filter-container {
-                gap: 6px;
-            }
-
-            .filter-btn {
-                padding: 6px 11px;
-                font-size: 0.78rem;
             }
 
             .gallery-item,
@@ -1022,21 +1005,21 @@
         </div>
 
         <div class="filter-container">
-            <button class="filter-btn active" data-filter="all">Todos <span class="filter-count">(39)</span></button>
-            <button class="filter-btn" data-filter="recentes">Recentes <span class="filter-count">(39)</span></button>
-            <button class="filter-btn" data-filter="motocross">Motocross & Ação <span class="filter-count">(4)</span></button>
-            <button class="filter-btn" data-filter="ensaios">Ensaios <span class="filter-count">(1)</span></button>
-            <button class="filter-btn" data-filter="futebol">Futebol <span class="filter-count">(19)</span></button>
-            <button class="filter-btn" data-filter="beachtennis">Beach Tennis <span class="filter-count">(3)</span></button>
-            <button class="filter-btn" data-filter="futsal">Futsal <span class="filter-count">(1)</span></button>
-            <button class="filter-btn" data-filter="corridarun">Corrida Run <span class="filter-count">(0)</span></button>
-            <button class="filter-btn" data-filter="volei">Vôlei <span class="filter-count">(2)</span></button>
-            <button class="filter-btn" data-filter="futevolei">Futevôlei <span class="filter-count">(2)</span></button>
-            <button class="filter-btn" data-filter="eventos">Eventos <span class="filter-count">(1)</span></button>
-            <button class="filter-btn" data-filter="tenis">Tênis <span class="filter-count">(0)</span></button>
-            <button class="filter-btn" data-filter="vaquejada">Vaquejada <span class="filter-count">(5)</span></button>
-            <button class="filter-btn" data-filter="cavalgada">Cavalgada <span class="filter-count">(3)</span></button>
-            <button class="filter-btn" data-filter="outros">Outros <span class="filter-count">(0)</span></button>
+            <button class="filter-btn active" data-filter="all">Todos</button>
+            <button class="filter-btn" data-filter="recentes">Recentes</button>
+            <button class="filter-btn" data-filter="motocross">Motocross & Ação</button>
+            <button class="filter-btn" data-filter="ensaios">Ensaios</button>
+            <button class="filter-btn" data-filter="futebol">Futebol</button>
+            <button class="filter-btn" data-filter="beachtennis">Beach Tennis</button>
+            <button class="filter-btn" data-filter="futsal">Futsal</button>
+            <button class="filter-btn" data-filter="corridarun">Corrida Run</button>
+            <button class="filter-btn" data-filter="volei">Vôlei</button>
+            <button class="filter-btn" data-filter="futevolei">Futevôlei</button>
+            <button class="filter-btn" data-filter="eventos">Eventos</button>
+            <button class="filter-btn" data-filter="tenis">Tênis</button>
+            <button class="filter-btn" data-filter="vaquejada">Vaquejada</button>
+            <button class="filter-btn" data-filter="cavalgada">Cavalgada</button>
+            <button class="filter-btn" data-filter="outros">Outros</button>
         </div>
 
         <div class="slider-wrapper">
@@ -1478,7 +1461,7 @@
             <div class="service-card">
                 <div class="service-icon"><i class="fas fa-camera"></i></div>
                 <h3>Fotografia Esportiva</h3>
-                <p>Cobertura completa de motocross, trilhas, vaquejada, futebol e esportes de alta velocidade-com foco, timing e emoção em cada frame.</p>
+                <p>Cobertura completa de motocross, trilhas, vaquejada, futebol e esportes de alta velocidade-com foco,timing e emoção em cada frame.</p>
                 <a href="#contacto" class="service-link">Pedir Orçamento <i class="fas fa-arrow-right"></i></a>
             </div>
 
@@ -1590,7 +1573,7 @@
         });
 
         // -----------------------------------------------------------
-        // NAVEGAÇÃO, MENU MOBILE E SCROLLSPY
+        // NAVEGAÇÃO, MENU MOBILE E ATUALIZAÇÃO DO ITEM ATIVO
         // -----------------------------------------------------------
         const mobileToggle = document.getElementById('mobileToggle');
         const navLinks = document.getElementById('navLinks');
@@ -1635,7 +1618,7 @@
         });
 
         // -----------------------------------------------------------
-        // SLIDERS, FILTROS E CONTAGEM DINÂMICA
+        // SLIDERS E FILTROS DA GALERIA
         // -----------------------------------------------------------
         function slideGallery(direction) {
             const slider = document.getElementById('gallerySlider');
@@ -1660,35 +1643,6 @@
         const filterBtns = document.querySelectorAll('.filter-btn');
         const galleryItems = document.querySelectorAll('.gallery-item');
         const gallerySlider = document.getElementById('gallerySlider');
-
-        // Atualização automática dos números sem alterar o tamanho do botão
-        function updateFilterCounts() {
-            filterBtns.forEach(btn => {
-                const filter = btn.getAttribute('data-filter');
-                let count = 0;
-
-                if (filter === 'all') {
-                    count = galleryItems.length;
-                } else {
-                    galleryItems.forEach(item => {
-                        const categories = item.getAttribute('data-category').split(' ');
-                        if (categories.includes(filter)) {
-                            count++;
-                        }
-                    });
-                }
-
-                let countSpan = btn.querySelector('.filter-count');
-                if (!countSpan) {
-                    countSpan = document.createElement('span');
-                    countSpan.className = 'filter-count';
-                    btn.appendChild(countSpan);
-                }
-                countSpan.textContent = `(${count})`;
-            });
-        }
-
-        document.addEventListener('DOMContentLoaded', updateFilterCounts);
 
         filterBtns.forEach(btn => {
             btn.addEventListener('click', () => {
