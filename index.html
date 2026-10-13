@@ -5,6 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dan XT12 | Fotógrafo & Designer Gráfico</title>
 
+    <!-- Favicon / Ícone do Site -->
+    <link rel="icon" type="image/png" href="Designer.png">
+    <link rel="apple-touch-icon" href="Designer.png">
+
     <!-- Preload das Imagens Principais -->
     <link rel="preload" as="image" href="danxt.jpeg" fetchpriority="high">
     <link rel="preload" as="image" href="Red Gradient Profile Photo Instagram Post (1920 x 1080 px).jpg" fetchpriority="high">
@@ -327,7 +331,7 @@
         }
 
         /* ==========================================================================
-           5. SOBRE MIM
+           5. SOBRE MIM (MANTER A PROPORÇÃO NATURAL DA FOTO)
            ========================================================================== */
         section {
             padding: 80px 5%;
@@ -373,9 +377,10 @@
             border: 1px solid var(--border-color);
         }
 
+        /* PROPORÇÃO NATURAL SEM CORTES */
         .about-img-box img {
             width: 100%;
-            height: 100%;
+            height: auto;
             object-fit: cover;
             display: block;
         }
@@ -985,12 +990,14 @@
             }
         }
 
-        /* MEDIA QUERY CELULAR (MOBILE) */
+        /* MEDIA QUERY CELULAR (MOBILE AJUSTADO SEM ZOOM EXCESIV0) */
         @media (max-width: 768px) {
-            /* TROCA A IMAGEM DO HERO PARA A VERSÃO DE CELULAR */
             .hero {
-                background: linear-gradient(180deg, rgba(6, 8, 12, 0.3) 0%, var(--bg-dark) 100%),
-                            url('Red Gradient Profile Photo Instagram Post.jpg') center/cover no-repeat;
+                min-height: 85vh;
+                padding: 130px 5% 50px;
+                background: linear-gradient(180deg, rgba(6, 8, 12, 0.35) 0%, rgba(6, 8, 12, 0.75) 65%, var(--bg-dark) 100%),
+                            url('Red Gradient Profile Photo Instagram Post.jpg') center top / contain no-repeat;
+                background-color: var(--bg-dark);
             }
 
             .nav-links {
@@ -1113,14 +1120,14 @@
         <div class="about-grid">
             <div class="about-img-wrapper">
                 <div class="about-img-box">
-                    <img src="danxt.jpeg" alt="Daniel Dan XT12 Fotógrafo" fetchpriority="high" decoding="async" width="600" height="600">
+                    <img src="danxt.jpeg" alt="Daniel Dan XT12 Fotógrafo" fetchpriority="high" decoding="async">
                 </div>
             </div>
 
             <div class="about-text">
                 <div class="sub-header-line">CONHECE O FOTÓGRAFO</div>
                 <h3>DANIEL — <span class="text-cyan">DAN XT12</span></h3>
-                <p>Sou fotógrafo e designer gráfico apaixonado pela adrenalina, movimento e expressões autênticas. Especializei-me na cobertura de eventos esportivos de alta velocidade como o motocross, trilhas, vaquejada, futebol, capturando momentos épicos com precisão milimétrica.</p>
+                <p>Sou fotógrafo e designer gráfico apaixonado pela adrenaline, movimento e expressões autênticas. Especializei-me na cobertura de eventos esportivos de alta velocidade como o motocross, trilhas, vaquejada, futebol, capturando momentos épicos com precisão milimétrica.</p>
                 <p>Unindo a fotografia de alta performance ao design gráfico, entrego um trabalho completo: desde o disparo no terreno até à arte final para redes sociais e imprensa.</p>
 
                 <div class="about-actions">
